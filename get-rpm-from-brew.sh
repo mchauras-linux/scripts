@@ -20,7 +20,9 @@ rm -f *.rpm
 
 for line in $file
 do
-	wget $line	
+	wget $line &	
 done
 
 cd ..
+
+wait
