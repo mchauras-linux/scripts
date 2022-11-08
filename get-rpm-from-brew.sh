@@ -26,3 +26,5 @@ done
 cd ..
 
 wait
+
+tar cvzf RPMS.tar.gz RPMS/
