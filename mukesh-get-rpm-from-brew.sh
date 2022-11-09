@@ -27,4 +27,4 @@ cd ..
 
 wait
 
-tar cvzf RPMS.tar.gz RPMS/
+tar czvf RPMS.tar.gz RPMS/
