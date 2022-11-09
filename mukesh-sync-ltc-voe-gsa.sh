@@ -2,7 +2,6 @@
 
 if [ ! -e ~/mchauras ]
 then
-	echo "Exists"
 	mkdir -p ~/mchauras
 	file=`which $0`
 	cp $file ~/mchauras/
