@@ -1,0 +1,29 @@
+set imap_user = "mchauras.linux@gmail.com"
+set imap_pass = ""
+
+set sendmail="/usr/sbin/ssmtp"
+
+set folder="imaps://imap.gmail.com:993"
+set spoolfile="imaps://imap.gmail.com/INBOX"
+set record="imaps://imap.gmail.com/[Gmail]/Sent Mail"
+set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+
+set from = "mchauras.linux@gmail.com"
+set realname = "Mukesh Chaurasiya"
+
+set smtp_url = "smtp://mchauras.linux@smtp.gmail.com:587/"
+set smtp_pass=""
+
+set move = no
+set imap_keepalive = 900
+
+# Gmail-style keyboard shortcuts
+macro index,pager ga "<change-folder>=[Gmail]/All<tab><enter>" "Go to all mail"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+macro index,pager e "<enter-command>unset trash\n <delete-message>" "Gmail archive message" # different from Gmail, but wanted to keep "y" to show folders.
