@@ -1,0 +1,14 @@
+[credential]
+	helper = store
+[user]
+	email = mchauras.linux@gmail.com
+	name = Mukesh Kumar Chaurasiya
+[diff]
+	renameLimit = 1672
+
+[sendemail]
+	smtpserver = /usr/bin/esmtp
+	smtpEncryption = tls
+	smtpServer = smtp.gmail.com
+	smtpUser = mchauras.linux@gmail.com
+	smtpServerPort = 587

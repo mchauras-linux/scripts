@@ -1,0 +1,22 @@
+set sort=threads
+set mbox_type=Maildir
+set folder="~/.mail/"
+set mask="!^\\.[^.]"
+set mbox="~/.mail/inbox"
+set spoolfile="~/.mail/spool"
+set record="~/.mail/sent"
+set postponed="~/.mail/postponed"
+set certificate_file="~/.mail/certificates"
+set editor="vim"
+set include=ask-yes
+set sendmail="/usr/bin/esmtp"
+set envelope_from=yes
+set from="Mukesh Chaurasiya <mchauras.linux@gmail.com>"
+set use_from=yes
+set edit_headers=yes
+mailboxes `echo -n "+ "; find ~/mail -maxdepth 1 -type d -name "*" -printf "+'%f' "`
+macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+macro compose A "<attach-message>?<toggle-mailboxes>" "attach message(s) to this message"

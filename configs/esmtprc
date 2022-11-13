@@ -1,0 +1,5 @@
+identity "mchauras.linux@gmail.com"
+hostname smtp.gmail.com:587
+username "mchauras.linux@gmail.com"
+password ""
+starttls required 
