@@ -15,6 +15,7 @@ echo -e "Data transfer logs to DS\n			\
 
 # Sync with DS and save logs
 rsync -avh --progress ~/nas/ $DESTINATION:/volume1/pub/mukesh/ 2>&1 > $LOG_FILE
+rsync -avh --progress ~/.vm/ $DESTINATION:/volume1/pub/mukesh/.vm/ 2>&1 >> $LOG_FILE
 
 # Send email
 cat $EMAIL_BODY_FILE |					\
