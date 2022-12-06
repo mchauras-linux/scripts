@@ -1,6 +1,6 @@
 #! /bin/bash
-UBUNTU_URL=https://old-releases.ubuntu.com/releases/focal/ubuntu-20.04.2.0-desktop-amd64.iso
-UBUNTU_IMG_NAME=ubuntu-20.04.2.0-desktop-amd64
+UBUNTU_URL=https://old-releases.ubuntu.com/releases/jammy/ubuntu-22.04-live-server-amd64.iso
+UBUNTU_IMG_NAME=ubuntu-22.04-live-server-amd64
 mkdir -p ~/.vm
 
 
@@ -31,18 +31,17 @@ then
 	  -device usb-tablet \
 	  -smp $N_PROC \
 	  -cdrom ~/.vm/$UBUNTU_IMG_NAME.iso \
-	  -drive file=~/.vm/$UBUNTU_IMG_NAME.qcow2,if=virtio
+	  -drive file=~/.vm/$UBUNTU_IMG_NAME.qcow2,format=qcow2,if=virtio \
+	  -net nic,model=virtio \
+	  -net user,hostfwd=tcp:127.0.0.1:2001-:22
 else
 	qemu-system-x86_64 \
-	  -m 8G \
-	  --nographic \
 	  -vga none \
-	  -display default,show-cursor=on \
-	  -usb \
-	  -device usb-tablet \
+	  --nographic \
+	  -m 8G \
 	  -smp $N_PROC \
 	  -cdrom ~/.vm/$UBUNTU_IMG_NAME.iso \
-	  -drive file=~/.vm/$UBUNTU_IMG_NAME.qcow2,if=virtio \
+	  -drive file=~/.vm/$UBUNTU_IMG_NAME.qcow2,format=qcow2,if=virtio \
 	  -net nic,model=virtio \
 	  -net user,hostfwd=tcp:127.0.0.1:2001-:22
 fi
