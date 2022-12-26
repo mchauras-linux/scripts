@@ -10,7 +10,7 @@ DESTINATION=mchauras@192.168.79.100
 EMAIL_BODY_FILE=/tmp/mail_body 
 
 echo -e "Data transfer logs to DS\n			\
-\nSource:\n`ifconfig`\n					\
+\nSource:\n`/usr/sbin/ifconfig`\n			\
 \nDestination: $DESTINATION" > $EMAIL_BODY_FILE
 
 # Sync with DS and save logs
