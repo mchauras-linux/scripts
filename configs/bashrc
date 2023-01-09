@@ -1,0 +1,51 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# User specific environment
+PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+# Use custom bash prompt (will execute .bash_prompt script)
+if [ -f ~/.bash_prompt ]; then
+  . ~/.bash_prompt
+fi
+
+PATH=$PATH:/home/mchauras/scripts/:/home/mchauras/mukesh_tools/:/home/mchauras/qemu/build
+
+CSCOPE_EDITOR=vim
+EDITOR=vim
+
+#beaker specific
+console ()
+{
+    local OPT=$(shopt -p -o nounset);
+    set -o nounset;
+    local HOST=$1;
+    local CONSERVER;
+    case ${HOST} in
+        *aus*)
+            CONSERVER="spv-21-pub.aus.stglabs.ibm.com"
+        ;;
+        *pok*)
+            CONSERVER="c350f03u17.pok.stglabs.ibm.com"
+        ;;
+        *)
+            CONSERVER="spv-21-pub.aus.stglabs.ibm.com"
+        ;;
+        #case ${HOST} in
+        # *)
+        #        CONSERVER="9.53.143.33"
+        # ;;
+    esac;
+    /usr/bin/console -M ${CONSERVER} -p 782 ${HOST};
+    eval ${OPT}
+}

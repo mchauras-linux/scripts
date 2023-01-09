@@ -1,0 +1,5 @@
+[customrepo]
+name=CustomRepository
+baseurl=http://ltcrain85-lp5.aus.stglabs.ibm.com:9000/RHEL-9.2-NIGHTLY-2022-12-05/BaseOS/ppc64le/os
+enabled=1
+gpgcheck=0
