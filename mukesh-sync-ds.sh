@@ -4,7 +4,7 @@
 LOG_FILE=/tmp/nas_sync.log
 
 # NAS user@ip
-DESTINATION=mchauras@192.168.79.100
+DESTINATION=mchauras@192.168.69.100
 
 # Create Email body
 EMAIL_BODY_FILE=/tmp/mail_body 
