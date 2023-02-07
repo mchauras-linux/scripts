@@ -25,6 +25,11 @@ fps=${fps:-120}
 
 bitrate=`mediainfo --Output='Video;%BitRate%' $concat_output`
 
+
+echo "ffmpeg -hwaccel cuda -hwaccel_output_format cuda -an -i $concat_output -vf framestep=$framestep,setpts=N/$fps/TB -r $fps -c:v h264_nvenc -b:v $bitrate $output"
+
+read -p "Proceed??"
+
 #ffmpeg -an -i $concat_output -vf framestep=$framestep,setpts=N/$fps/TB -r $fps $output
 ffmpeg -hwaccel cuda -hwaccel_output_format cuda -an -i $concat_output -vf framestep=$framestep,setpts=N/$fps/TB -r $fps -c:v h264_nvenc -b:v $bitrate $output
 
