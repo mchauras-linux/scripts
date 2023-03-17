@@ -89,7 +89,7 @@ plugins=(git
 # fzf environment variables
 export FZF_BASE=/home/mchauras/.fzf
 export FZF_PREVIEW_ADVANCED=true
-export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border'
+export FZF_DEFAULT_OPTS='-m --height 60% --layout=reverse --border'
 #export FZF_PREVIEW_WINDOW=''
 
 source $ZSH/oh-my-zsh.sh
