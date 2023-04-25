@@ -14,12 +14,14 @@ syntax on
 
 " Add numbers to each line on the left-hand side.
 set relativenumber
+set nu
 
 " Highlight cursor line underneath the cursor horizontally.
 " set cursorline
 
 " Highlight cursor line underneath the cursor vertically.
 " set cursorcolumn
+set colorcolumn=80
 
 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
@@ -51,6 +53,9 @@ set wildmenu
 
 " Make wildmenu behave like similar to Bash completion.
 set wildmode=list:longest
+
+" Scroll Settings
+set scrolloff=10
 
 " There are certain files that we would never want to edit with Vim.
 " Wildmenu will ignore files with these extensions.
