@@ -22,6 +22,7 @@ set nu
 " Highlight cursor line underneath the cursor vertically.
 " set cursorcolumn
 set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
