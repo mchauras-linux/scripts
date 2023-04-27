@@ -88,6 +88,10 @@ plugins=(git
 	#zsh-autocomplete
 	fzf
 	fzf-tab
+	sudo
+	web-search
+	copyfile
+	history
 	)
 # fzf environment variables
 export FZF_BASE=/home/mukesh/.oh-my-zsh/custom/plugins/fzf
