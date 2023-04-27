@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/home/mchauras/scripts/:/home/mchauras/mukesh_tools/:/home/mchauras/qemu/build:/home/linuxbrew/.linuxbrew/bin
+export PATH=$PATH:/home/$USER/scripts/:/home/$USER/mukesh_tools/:/home/$USER/qemu/build:/home/linuxbrew/.linuxbrew/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -90,7 +90,7 @@ plugins=(git
 	fzf-tab
 	)
 # fzf environment variables
-export FZF_BASE=/home/mchauras/.fzf
+export FZF_BASE=/home/mukesh/.oh-my-zsh/custom/plugins/fzf
 export FZF_PREVIEW_ADVANCED=true
 export FZF_DEFAULT_OPTS='-m --height 60% --layout=reverse --border'
 #export FZF_PREVIEW_WINDOW=''
