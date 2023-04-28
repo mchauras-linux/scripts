@@ -1,13 +1,11 @@
 #! /bin/bash
 
-cp ~/.vimrc ~/scripts/configs 
-cp ~/.zshrc ~/scripts/configs 
-cp ~/.zsh_func ~/scripts/configs
+CONFIG=~/scripts/configs
 
-cd ~/scripts
+cd $CONFIG
+git pull
 
-git add configs/.vimrc configs/.zshrc configs/.zsh_func
+cp $CONFIG/.vimrc ~/ 
+cp $CONFIG/.zshrc ~/
+cp $CONFIG/.zsh_func ~/
 
-git commit -m "Updated vim and zsh config"
-
-git push
