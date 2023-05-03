@@ -8,4 +8,5 @@ git pull
 cp $CONFIG/.vimrc ~/ 
 cp $CONFIG/.zshrc ~/
 cp $CONFIG/.zsh_func ~/
+cp $CONFIG/.p10k.zsh ~/
 

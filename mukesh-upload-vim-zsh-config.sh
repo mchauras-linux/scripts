@@ -3,6 +3,7 @@
 cp ~/.vimrc ~/scripts/configs 
 cp ~/.zshrc ~/scripts/configs 
 cp ~/.zsh_func ~/scripts/configs
+cp ~/.p10k.zsh ~/scripts/configs
 
 cd ~/scripts
 
