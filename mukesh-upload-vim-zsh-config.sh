@@ -7,7 +7,7 @@ cp ~/.p10k.zsh ~/scripts/configs
 
 cd ~/scripts
 
-git add configs/.vimrc configs/.zshrc configs/.zsh_func
+git add configs/.vimrc configs/.zshrc configs/.zsh_func configs/.p10k.zsh
 
 git commit -m "Updated vim and zsh config"
 
