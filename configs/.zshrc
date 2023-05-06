@@ -93,6 +93,7 @@ plugins=(git
 	web-search
 	copyfile
 	history
+	rust
 	)
 # fzf environment variables
 export FZF_BASE=/home/mukesh/.oh-my-zsh/custom/plugins/fzf
@@ -136,3 +137,6 @@ export CSCOPE_EDITOR=/usr/bin/vim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# zsh aliases
+[[ ! -f ~/.zsh_aliases ]] || source ~/.zsh_aliases
