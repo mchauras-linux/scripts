@@ -12,7 +12,7 @@ cp $CONFIG/.zshrc ~/
 cp $CONFIG/.zsh_aliases ~/
 cp $CONFIG/.zsh_func ~/
 cp $CONFIG/.p10k.zsh ~/
-cp $CONFIG/fonts/* /usr/share/fonts
+cp -rf $CONFIG/fonts/* /usr/share/fonts
 
 if [ ! -d ~/.oh-my-zsh ]
 then
