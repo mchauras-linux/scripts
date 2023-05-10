@@ -14,4 +14,6 @@ else
        git clone git@github.com:mchauras-linux/scripts.git ~/scripts	
 fi
 
+~/scripts/mukesh-sync-vim-zsh-config.sh
+
 
