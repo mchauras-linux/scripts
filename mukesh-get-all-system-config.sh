@@ -4,7 +4,13 @@ if ! command -v git -v &> /dev/null
 then
     echo "git could not be found. Install git to proceed."
     exit
-fi 
+fi
+
+if ! command -v zsh -v &> /dev/null
+then
+    echo "zsh could not be found. Install zsh to proceed."
+    exit
+fi
 
 if [ -d ~/scripts ]
 then
