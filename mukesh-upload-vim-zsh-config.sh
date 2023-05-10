@@ -14,6 +14,6 @@ if [ -f ~/.zshrc ]
 then
 	git add configs/.vimrc configs/.zshrc configs/.zsh_func configs/.p10k.zsh configs/.zsh_aliases
 	git commit -m "Updated vim and zsh config"
-	echo "\n\nPushing All configs to scripts repo\n\n"
+	echo -e "\n\nPushing All configs to scripts repo\n\n"
 	git push
 fi
