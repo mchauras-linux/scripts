@@ -85,7 +85,6 @@ plugins=(git
 	dirhistory 
 	zsh-syntax-highlighting 
 	zsh-autosuggestions
-	chucknorris
 	#zsh-autocomplete
 	fzf
 	fzf-tab
