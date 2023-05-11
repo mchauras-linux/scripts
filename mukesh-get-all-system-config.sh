@@ -37,4 +37,4 @@ fi
 
 ~/scripts/mukesh-sync-vim-zsh-config.sh
 
-
+chsh -s `which zsh`
