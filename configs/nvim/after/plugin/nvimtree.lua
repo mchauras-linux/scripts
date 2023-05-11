@@ -1,6 +1,6 @@
 -- examples for your init.lua
 
-vim.keymap.set("n", "<leader>e", ":NvimTreeFocus<cr>", opts)
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
@@ -19,6 +19,6 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = false,
+    dotfiles = true,
   },
 })
