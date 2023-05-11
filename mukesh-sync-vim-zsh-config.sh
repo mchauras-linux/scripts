@@ -13,6 +13,7 @@ cp $CONFIG/.zshrc ~/
 cp $CONFIG/.zsh_aliases ~/
 cp $CONFIG/.zsh_func ~/
 cp $CONFIG/.p10k.zsh ~/
+cp $CONFIG/.tmux.conf ~/
 cp -rf $CONFIG/fonts/* /usr/share/fonts
 cp -rf $CONFIG/nvim ~/.config
 

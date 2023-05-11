@@ -8,7 +8,9 @@ cp ~/.zshrc $CONFIG
 cp ~/.zsh_func $CONFIG
 cp ~/.zsh_aliases $CONFIG
 cp ~/.p10k.zsh $CONFIG
+cp ~/.tmux.conf $CONFIG 
 cp -rf $CONFIG_NEOVIM $CONFIG
+
 
 cd ~/scripts
 
@@ -19,8 +21,11 @@ then
 	configs/.zshrc 		\
 	configs/.zsh_func 	\
 	configs/.p10k.zsh 	\
+	configs/.tmux.conf 	\
 	configs/nvim	 	\
 	configs/.zsh_aliases
+        
+        git status
 
 	git commit -m "Updated vim and zsh config"
 	echo -e "\n\nPushing All configs to scripts repo\n\n"
