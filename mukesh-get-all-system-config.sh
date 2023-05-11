@@ -32,7 +32,8 @@ then
 	cd ~/scripts/
 	git pull
 else
-       git clone --depth=1 https://github.com/mchauras-linux/scripts.git ~/scripts
+       git clone --depth=1 https://github.com/mchauras-linux/scripts.git \
+	~/scripts
 fi
 
 ~/scripts/mukesh-sync-vim-zsh-config.sh
