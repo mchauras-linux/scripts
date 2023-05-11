@@ -39,3 +39,6 @@ fi
 ~/scripts/mukesh-sync-vim-zsh-config.sh
 
 chsh -s `which zsh`
+
+git clone --depth 1 https://github.com/wbthomason/packer.nvim
+   ~/.local/share/nvim/site/pack/packer/start/packer.nvim

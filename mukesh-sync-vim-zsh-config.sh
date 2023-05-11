@@ -1,7 +1,7 @@
 #! /bin/bash
 
 CONFIG=~/scripts/configs
-CONFIG_NEOVIM=~/.config/neovim
+CONFIG_NEOVIM=~/.config/nvim
 
 ~/scripts/mukesh-upload-vim-zsh-config.sh
 
@@ -14,7 +14,7 @@ cp $CONFIG/.zsh_aliases ~/
 cp $CONFIG/.zsh_func ~/
 cp $CONFIG/.p10k.zsh ~/
 cp -rf $CONFIG/fonts/* /usr/share/fonts
-cp -rf $CONFIG/neovim ~/.config
+cp -rf $CONFIG/nvim ~/.config
 
 if [ ! -d ~/.oh-my-zsh ]
 then

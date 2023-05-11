@@ -1,7 +1,7 @@
 #! /bin/bash
 
 CONFIG=~/scripts/configs
-CONFIG_NEOVIM=~/.config/neovim
+CONFIG_NEOVIM=~/.config/nvim
 
 cp ~/.vimrc $CONFIG 
 cp ~/.zshrc $CONFIG 
@@ -19,7 +19,7 @@ then
 	configs/.zshrc 		\
 	configs/.zsh_func 	\
 	configs/.p10k.zsh 	\
-	configs/neovim	 	\
+	configs/nvim	 	\
 	configs/.zsh_aliases
 
 	git commit -m "Updated vim and zsh config"
