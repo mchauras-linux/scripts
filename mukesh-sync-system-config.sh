@@ -9,6 +9,9 @@ cd $CONFIG
 git pull
 
 cp $CONFIG/.vimrc ~/ 
+cp $CONFIG/.bashrc ~/ 
+cp $CONFIG/.bash_prompt ~/ 
+cp $CONFIG/.bash_profile ~/ 
 cp $CONFIG/.zshrc ~/
 cp $CONFIG/.zsh_aliases ~/
 cp $CONFIG/.zsh_func ~/
