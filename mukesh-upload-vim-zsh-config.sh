@@ -4,9 +4,6 @@ CONFIG=~/scripts/configs
 CONFIG_NEOVIM=~/.config/nvim
 
 cp ~/.vimrc $CONFIG 
-cp ~/.bashrc $CONFIG 
-cp ~/.bash_prompt $CONFIG 
-cp ~/.bash_profile $CONFIG 
 cp ~/.zshrc $CONFIG 
 cp ~/.zsh_func $CONFIG
 cp ~/.zsh_aliases $CONFIG
@@ -21,9 +18,6 @@ if [ -f ~/.zshrc ]
 then
 	git add 		\
 	configs/.vimrc 		\
-	configs/.bashrc 	\
-	configs/.bash_prompt 	\
-	configs/.bash_profile 	\
 	configs/.zshrc 		\
 	configs/.zsh_func 	\
 	configs/.p10k.zsh 	\
