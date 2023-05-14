@@ -40,7 +40,7 @@ then
 	git commit -m "Updated at `date "+%Y-%m-%d %H:%M:%S"`"
 	echo -e "\n\nPushing All configs to scripts repo\n\n"
 	git push --set-upstream origin $BRANCH
+	git checkout master
 fi
 
-git checkout master
 cd
