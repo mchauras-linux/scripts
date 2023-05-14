@@ -92,7 +92,6 @@ plugins=(git
 	web-search
 	copyfile
 	history
-	jsontools
 	)
 # fzf environment variables
 export FZF_BASE=/home/mukesh/.oh-my-zsh/plugins/fzf
@@ -130,7 +129,6 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zsh_func ] && source ~/.zsh_func
-[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
 
 # User Defined
 export CSCOPE_EDITOR=/usr/bin/vim
