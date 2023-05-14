@@ -95,7 +95,7 @@ plugins=(git
 	jsontools
 	)
 # fzf environment variables
-export FZF_BASE=/home/mukesh/.oh-my-zsh/plugins/fzf
+export FZF_BASE=/home/mukesh/.fzf
 export FZF_PREVIEW_ADVANCED=true
 export FZF_DEFAULT_OPTS='-m --height 60% --layout=reverse --border'
 #export FZF_PREVIEW_WINDOW=''
