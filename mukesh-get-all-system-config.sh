@@ -36,7 +36,7 @@ else
 	~/scripts
 fi
 
-~/scripts/mukesh-sync-vim-zsh-config.sh
+~/scripts/mukesh-sync-system-config.sh
 
 chsh -s `which zsh`
 
