@@ -22,7 +22,7 @@ if [ -f ~/.bash_prompt ]; then
   . ~/.bash_prompt
 fi
 
-PATH=$PATH:/home/mchauras/scripts/:/home/mchauras/mukesh_tools/:/home/mchauras/qemu/build
+PATH=$PATH:/home/$USER/scripts/:/home/$USER/mukesh_tools/:/home/$USER/qemu/build
 
 CSCOPE_EDITOR=nvim
 EDITOR=nvim
