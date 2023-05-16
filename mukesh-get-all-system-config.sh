@@ -14,6 +14,13 @@ then
     exit
 fi
 
+if ! command -v nvim -v &> /dev/null
+then
+    echo -e "\n"
+    echo "nvim could not be found. Install nvim to proceed."
+    exit
+fi
+
 if ! command -v usermod -v &> /dev/null
 then
     echo -e "\n"
@@ -52,5 +59,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 	~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+nvim +PackerSync +q
 
 echo "Install tmux plugin using <Ctrl+b I>"
