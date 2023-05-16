@@ -7,8 +7,6 @@ BRANCH="`hostname`-`date "+%Y-%m-%d-%H-%M-%S"`"
 if [ -f ~/.mukesh_configured ] 
 then
 	cd ~/scripts
-	
-	git checkout -b $BRANCH
 
 	cp ~/.vimrc $CONFIG 
 	cp ~/.bashrc $CONFIG 
@@ -21,25 +19,30 @@ then
 	cp ~/.tmux.conf $CONFIG 
 	cp -rf $CONFIG_NEOVIM $CONFIG
 
-	git add 		\
-	configs/.vimrc 		\
-	configs/.bashrc 	\
-	configs/.bash_prompt 	\
-	configs/.bash_profile 	\
-	configs/.zshrc 		\
-	configs/.zsh_func 	\
-	configs/.p10k.zsh 	\
-	configs/.tmux.conf 	\
-	configs/nvim	 	\
-	configs/.zsh_aliases
-       
-	git add mukesh-*
+	if [[ `git status --porcelain` ]]; 
+	then
+		git checkout -b $BRANCH
 
-        git status
-
-	git commit -m "Updated at `date "+%Y-%m-%d %H:%M:%S"`"
-	echo -e "\n\nPushing All configs to scripts repo\n\n"
-	git push --set-upstream origin $BRANCH
+		git add 		\
+		configs/.vimrc 		\
+		configs/.bashrc 	\
+		configs/.bash_prompt 	\
+		configs/.bash_profile 	\
+		configs/.zshrc 		\
+		configs/.zsh_func 	\
+		configs/.p10k.zsh 	\
+		configs/.tmux.conf 	\
+		configs/nvim	 	\
+		configs/.zsh_aliases
+	       
+		git add mukesh-*
+	
+	        git status
+	
+		git commit -m "Updated at `date "+%Y-%m-%d %H:%M:%S"`"
+		echo -e "\n\nPushing All configs to scripts repo\n\n"
+		git push --set-upstream origin $BRANCH
+	fi
 	git checkout master
 fi
 
