@@ -14,17 +14,24 @@ then
     exit
 fi
 
+if ! command -v usermod -v &> /dev/null
+then
+    echo -e "\n"
+    echo "usermod could not be found. Install usermod to proceed."
+    exit
+fi
+
 if ! command -v fzf &> /dev/null
 then
     echo -e "\n"
     echo "fzf could not be found. Install fzf to proceed."
     echo "Clone fzf using"
-    echo "git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf"
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
     echo -e "\n"
     echo "Install fzf using"
-    echo "~/.fzf/install"
-    echo -e "\n"
-    exit
+    ~/.fzf/install
+    echo -e "\nRestart Terminal, In case of SSH, disconnect and connect again."
+    exit 1
 fi
 
 if [ -d ~/scripts ]
@@ -38,7 +45,8 @@ fi
 
 ~/scripts/mukesh-sync-system-config.sh
 
-chsh -s `which zsh`
+#chsh -s `which zsh`
+sudo usermod --shell /bin/zsh $USER
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 	~/.local/share/nvim/site/pack/packer/start/packer.nvim
