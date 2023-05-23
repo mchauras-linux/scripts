@@ -131,6 +131,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zsh_func ] && source ~/.zsh_func
 [ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
+[ -f ~/.zsh_emv ] && source ~/.zsh_env
 
 # User Defined
 export CSCOPE_EDITOR=/usr/bin/nvim
