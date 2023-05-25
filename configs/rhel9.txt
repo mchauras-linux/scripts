@@ -1,0 +1,31 @@
+   17  dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y
+   18  dnf install sqlite3
+   21  dnf install nvim
+   22  dnf install neobim
+   23  dnf install neovim
+   32  yum install sqlite -y
+   36  yum install gcc-c++
+   38  dnf install clang
+   40  dnf install npm
+   45  dnf install lua luarocks-3.9.1-1.el9.noarch luajit
+   46  dnf install lua luarocks-3.9.1-1.el9.noarch 
+   51  dnf install python
+   52  dnf install python3
+   54  dnf install pynvim
+   56  python3 -m pip install pynvim
+   57  dnf install pip3
+   58  dnf install pip
+   59  python3 -m pip install pynvim
+   60  dnf install live-grep
+   61  dnf install rg
+   64  dnf install ripgrep
+   66  dnf install lsp
+   70  yum groupinstall "Development Tools"
+   71  yum install readline readline-devel
+   76  sudo yum install procps-ng curl file git
+   77  curl -fsSL -o install.sh https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+   79  /bin/bash install.sh
+   80  yum install -y neovim python3-neovim
+   86  history| grep install
+   87  history| grep install > rhel9.txt
+  113  dnf install dwarves
