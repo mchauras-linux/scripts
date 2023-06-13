@@ -44,7 +44,7 @@ else
 		~/scripts
 fi
 
-~/scripts/mukesh-sync-system-config.sh
+~/scripts/mukesh-download-system-config.sh
 
 #chsh -s `which zsh`
 sudo usermod --shell /bin/zsh $USER
