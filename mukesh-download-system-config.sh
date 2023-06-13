@@ -15,7 +15,6 @@ cp $CONFIG/.zsh_aliases ~/
 cp $CONFIG/.zsh_func ~/
 cp $CONFIG/.p10k.zsh ~/
 cp $CONFIG/.tmux.conf ~/
-sudo cp -rf $CONFIG/fonts/* /usr/share/fonts
 cp -rf $CONFIG/nvim ~/.config
 
 if [ ! -d ~/.oh-my-zsh ]; then
@@ -39,3 +38,13 @@ if [ ! -d ~/.oh-my-zsh ]; then
 		${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 fi
+
+case "$-" in
+    *i*)
+        interactive=1
+	sudo cp -rf $CONFIG/fonts/* /usr/share/fonts
+        ;;
+    *)
+        not_interactive=1
+        ;;
+esac
