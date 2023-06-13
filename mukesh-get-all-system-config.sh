@@ -33,6 +33,7 @@ if ! command -v fzf &>/dev/null; then
 	echo "Install fzf using"
 	~/.fzf/install
 	echo -e "\nRestart Terminal, In case of SSH, disconnect and connect again."
+	source ~/.zshrc
 	exit 1
 fi
 
