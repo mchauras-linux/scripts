@@ -16,6 +16,7 @@ export PATH
 alias gits="git status"
 if command -v nvim -v &> /dev/null
 then
+	echo "NVIM Found"
 	alias vim="nvim"
 	alias vi="nvim"
 	CSCOPE_EDITOR=nvim
