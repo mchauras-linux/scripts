@@ -48,7 +48,7 @@ fi
 ~/scripts/mukesh-download-system-config.sh
 
 #chsh -s `which zsh`
-if [ $USER == "root" ] 
+if [ $EUID -eq 0 ] 
 then
 	usermod --shell /bin/zsh $USER
 else

@@ -131,7 +131,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zsh_func ] && source ~/.zsh_func
 [ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
-[ -f ~/.zsh_emv ] && source ~/.zsh_env
+[ -f ~/.zshenv ] && source ~/.zshenv
 
 # User Defined
 if ! command -v nvim -v &> /dev/null
