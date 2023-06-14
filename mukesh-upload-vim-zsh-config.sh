@@ -7,7 +7,7 @@ BRANCH="`hostname`-`date "+%Y-%m-%d-%H-%M-%S"`"
 if [ -f ~/.mukesh_configured ] 
 then
 	cd ~/scripts
-
+	git pull
 	cp ~/.vimrc $CONFIG 
 	cp ~/.bashrc $CONFIG 
 	cp ~/.bash_prompt $CONFIG 
