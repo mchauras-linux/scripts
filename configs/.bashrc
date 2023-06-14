@@ -14,18 +14,25 @@ export PATH
 
 # User specific aliases and functions
 alias gits="git status"
-alias vim="nvim"
-alias vi="nvim"
+if ! command -v nvim -v &> /dev/null
+then
+	alias vim="nvim"
+	alias vi="nvim"
+	CSCOPE_EDITOR=nvim
+	EDITOR=nvim
+else
+	export CSCOPE_EDITOR=/usr/bin/vim
+	export EDITOR='vim'
+fi
+
 
 # Use custom bash prompt (will execute .bash_prompt script)
 if [ -f ~/.bash_prompt ]; then
   . ~/.bash_prompt
 fi
 
-PATH=$PATH:/home/$USER/scripts/:/home/$USER/mukesh_tools/:/home/$USER/qemu/build
+export PATH=$PATH:$HOME/scripts/:/$HOME/mukesh_tools/:$HOME/qemu/build:/home/linuxbrew/.linuxbrew/bin
 
-CSCOPE_EDITOR=nvim
-EDITOR=nvim
 
 . "$HOME/.cargo/env"
 
