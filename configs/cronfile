@@ -1,0 +1,18 @@
+CRON_LOG="/tmp/cronlog"
+
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7)  OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  *  command to be executed
+# *  *  *  *  *  command --arg1 --arg2 file1 file2 2>&1
+#0 0 * * * /home/mchauras/scripts/mukesh-get-all-scripts.sh 2>&1 >> $CRON_LOG
+#0 0 * * * /home/mchauras/scripts/mukesh-sync-vim-zsh-config.sh 2>&1 >> $CRON_LOG
+
+0 * * * * /home/mchauras/scripts/mukesh-put-cronlog-header.sh 2>&1 >> $CRON_LOG
+0 * * * * /home/mchauras/scripts/mukesh-download-system-config.sh 2>&1 >> $CRON_LOG
+
+# System Specific
+0 * * * * /home/mchauras/mukesh_tools/mukesh-update-patches.sh 2>&1 >> $CRON_LOG
