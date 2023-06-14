@@ -134,8 +134,14 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.zsh_emv ] && source ~/.zsh_env
 
 # User Defined
-export CSCOPE_EDITOR=/usr/bin/nvim
-export EDITOR='nvim'
+if ! command -v nvim -v &> /dev/null
+then
+	export CSCOPE_EDITOR=/usr/bin/nvim
+	export EDITOR='nvim'
+else
+	export CSCOPE_EDITOR=/usr/bin/vim
+	export EDITOR='vim'
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
