@@ -14,7 +14,7 @@ export PATH
 
 # User specific aliases and functions
 alias gits="git status"
-if ! command -v nvim -v &> /dev/null
+if command -v nvim -v &> /dev/null
 then
 	alias vim="nvim"
 	alias vi="nvim"
