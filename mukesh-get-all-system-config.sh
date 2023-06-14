@@ -48,7 +48,12 @@ fi
 ~/scripts/mukesh-download-system-config.sh
 
 #chsh -s `which zsh`
-sudo usermod --shell /bin/zsh $USER
+if [ $USER == "root" ] 
+then
+	usermod --shell /bin/zsh $USER
+else
+	sudo usermod --shell /bin/zsh $USER
+fi
 
 # git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 # 	~/.local/share/nvim/site/pack/packer/start/packer.nvim
