@@ -134,7 +134,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.zshenv ] && source ~/.zshenv
 
 # User Defined
-if ! command -v nvim -v &> /dev/null
+if (( $+commands[nvim] ))		
 then
 	export CSCOPE_EDITOR=/usr/bin/nvim
 	export EDITOR='nvim'

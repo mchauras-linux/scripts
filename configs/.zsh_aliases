@@ -1,6 +1,6 @@
 alias gits="git status"
 
-if ! command -v nvim -v &> /dev/null
+if (( $+commands[nvim] ))		
 then
 	alias vim="nvim"
 	alias vi="nvim"
