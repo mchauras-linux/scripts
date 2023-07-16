@@ -1,0 +1,36 @@
+mukesh-setup-busybox.sh
+cd src/busybox
+
+make menuconfig
+## Enable Static binary option
+make -j$(nproc)
+make install
+
+cd _install
+mkdir etc
+cp ../examples/inittab ./etc
+vim etc/inittab
+## remone all tty lines
+
+mkdir etc/init.d
+vim etc/init.d/rcS
+"
+# /etc/init.d/rcS file content
+mkdir -p /proc 
+mount -t proc none /proc
+
+ifconfig lo up
+
+udhcpc -i eth0
+
+mkdir -p /dev 
+mount -t devtmpfs none /dev 
+
+mkdir -p /dev/pts 
+mount -t devpts nodev /dev/pts 
+
+telnetd -l /bin/sh
+"
+chmod +x etc/init.d/rcS
+cp ../examples/udhcp/simple.script usr/share/udhcpc/default.script
+find . | cpio -H newc -o | gzip > ../ramdisk.img
