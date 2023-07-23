@@ -8,7 +8,8 @@ fi
 # User specific environment
 PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 export PATH
-
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
