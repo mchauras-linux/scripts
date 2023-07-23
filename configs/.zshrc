@@ -142,6 +142,8 @@ else
 	export CSCOPE_EDITOR=/usr/bin/vim
 	export EDITOR='vim'
 fi
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
