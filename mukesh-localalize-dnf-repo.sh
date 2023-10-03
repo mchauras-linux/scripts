@@ -26,11 +26,9 @@ cleanup() {
 ID=$(head -n 1 $FILE | sed 's/^.//' | sed 's/.$//')
 
 echo $ID
-
 mv $FILE /etc/yum.repos.d/
 
 dnf reposync --repoid $ID
 
 tar czvf $ID.tar.gz $ID
-
 trap cleanup EXIT

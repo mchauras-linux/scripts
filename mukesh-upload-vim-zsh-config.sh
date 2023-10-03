@@ -42,5 +42,14 @@ BRANCH="$(hostname)-$(date "+%Y-%m-%d-%H-%M-%S")"
 		git push --set-upstream origin $BRANCH
 	fi
 	git checkout master
+else
+	read -p "Do you want this user to be configured as mukesh_configured? [N/y]" yn
+	case $yn in
+		[yY] )
+			touch ~/.mukesh_configured;;
+		* ) echo Skipping Configuration;;
+	esac
+
+fi
 
 cd
