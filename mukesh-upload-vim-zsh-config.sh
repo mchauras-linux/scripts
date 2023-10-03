@@ -3,7 +3,8 @@
 CONFIG=~/scripts/configs
 CONFIG_NEOVIM=~/.config/nvim
 BRANCH="$(hostname)-$(date "+%Y-%m-%d-%H-%M-%S")"
-
+if [ -f ~/.mukesh_configured ] 
+then
 	cd ~/scripts
 	git pull
 	cp ~/.vimrc $CONFIG
