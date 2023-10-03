@@ -32,5 +32,8 @@ mount -t devpts nodev /dev/pts
 telnetd -l /bin/sh
 "
 chmod +x etc/init.d/rcS
+mkdir usr/share
+mkdir usr/share/udhcpc
 cp ../examples/udhcp/simple.script usr/share/udhcpc/default.script
+
 find . | cpio -H newc -o | gzip > ../ramdisk.img

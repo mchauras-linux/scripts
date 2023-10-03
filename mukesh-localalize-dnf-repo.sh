@@ -3,6 +3,7 @@
 if [ "$EUID" -ne 0 ]
 then 
 	echo "Please run as root"
+	sudo $0 $1
 	exit -1
 fi
 
@@ -29,4 +30,5 @@ mv $FILE /etc/yum.repos.d/
 
 dnf reposync --repoid $ID
 
+tar czvf $ID.tar.gz $ID
 trap cleanup EXIT
