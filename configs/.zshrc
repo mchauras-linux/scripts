@@ -144,6 +144,9 @@ else
 fi
 export LC_ALL=en_IN.UTF-8
 export LANG=en_IN.UTF-8
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=100000000
+export SAVEHIST=100000000
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
