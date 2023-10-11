@@ -132,6 +132,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.zsh_func ] && source ~/.zsh_func
 [ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
 [ -f ~/.zshenv ] && source ~/.zshenv
+[ -f ~/.zsh_system ] && source ~/.zsh_system
 
 # User Defined
 if (( $+commands[nvim] ))		
