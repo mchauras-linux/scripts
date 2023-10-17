@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   opts = function()
     local icons = require("lazyvim.config").icons
-    local Util = require("lazyvim.util")
+    local Util = require("lazyvim.util").ui
 
     return {
       options = {
@@ -39,7 +39,11 @@ return {
           },
           { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
           -- { "filename", path = 2, symbols = { modified = "  ", readonly = "", unnamed = "", newfile = "[New]" } },
-          { "filename", path = 2, symbols = { modified = "[+]", readonly = "[-]", unnamed = "[No Name]", newfile = "[New]" } },
+          {
+            "filename",
+            path = 2,
+            symbols = { modified = "[+]", readonly = "[-]", unnamed = "[No Name]", newfile = "[New]" },
+          },
 					-- stylua: ignore
 					{
 						function() return require("nvim-navic").get_location() end,
@@ -70,12 +74,12 @@ return {
         },
         lualine_y = {
           { "location", separator = "", padding = { left = 0, right = 0 } },
-	  { "%L", icon = "☰", separator = "", padding = { left = 1, right = 1 } },
+          { "%L", icon = "☰", separator = "", padding = { left = 1, right = 1 } },
           { "progress", padding = { left = 0, right = 1 } },
         },
         lualine_z = {
           function()
-	    -- Ref for formats: https://www.gammon.com.au/scripts/doc.php?lua=os.date
+            -- Ref for formats: https://www.gammon.com.au/scripts/doc.php?lua=os.date
             return " " .. os.date("%b %d, %I:%M %p")
           end,
         },
