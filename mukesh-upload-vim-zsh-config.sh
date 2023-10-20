@@ -3,8 +3,7 @@
 CONFIG=~/scripts/configs
 CONFIG_NEOVIM=~/.config/nvim
 BRANCH="$(hostname)-$(date "+%Y-%m-%d-%H-%M-%S")"
-if [ -f ~/.mukesh_configured ] 
-then
+if [ -f ~/.mukesh_configured ]; then
 	cd ~/scripts
 	git pull
 	cp ~/.vimrc $CONFIG
@@ -17,6 +16,7 @@ then
 	cp ~/.p10k.zsh $CONFIG
 	cp ~/.tmux.conf $CONFIG
 	cp -rf $CONFIG_NEOVIM $CONFIG
+	cp ~/.spacemacs $CONFIG
 
 	if [[ $(git status --porcelain) ]]; then
 		git checkout -b $BRANCH
@@ -31,6 +31,7 @@ then
 			configs/.p10k.zsh \
 			configs/.tmux.conf \
 			configs/nvim \
+			configs/.spacemacs \
 			configs/.zsh_aliases
 
 		git add mukesh-*
@@ -46,9 +47,10 @@ then
 else
 	read -p "Do you want this user to be configured as mukesh_configured? [N/y]" yn
 	case $yn in
-		[yY] )
-			touch ~/.mukesh_configured;;
-		* ) echo Skipping Configuration;;
+	[yY])
+		touch ~/.mukesh_configured
+		;;
+	*) echo Skipping Configuration ;;
 	esac
 
 fi

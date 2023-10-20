@@ -15,7 +15,10 @@ cp $CONFIG/.zsh_aliases ~/
 cp $CONFIG/.zsh_func ~/
 cp $CONFIG/.p10k.zsh ~/
 cp $CONFIG/.tmux.conf ~/
+cp $CONFIG/.spacemacs ~/
 cp -rf $CONFIG/nvim ~/.config
+
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 if [ ! -d ~/.oh-my-zsh ]; then
 
@@ -40,11 +43,11 @@ if [ ! -d ~/.oh-my-zsh ]; then
 fi
 
 case "$-" in
-    *i*)
-        interactive=1
+*i*)
+	interactive=1
 	sudo cp -rf $CONFIG/fonts/* /usr/share/fonts
-        ;;
-    *)
-        not_interactive=1
-        ;;
+	;;
+*)
+	not_interactive=1
+	;;
 esac
