@@ -30,7 +30,7 @@ if [ -f ~/.mukesh_configured ]; then
 			configs/.zsh_func \
 			configs/.p10k.zsh \
 			configs/.tmux.conf \
-			configs/nvim \
+			configs/nvim/* \
 			configs/.spacemacs \
 			configs/.zsh_aliases
 
