@@ -33,7 +33,7 @@ if [ -f ~/.bash_prompt ]; then
   . ~/.bash_prompt
 fi
 
-export PATH=$PATH:$HOME/scripts/:/$HOME/mukesh_tools/:$HOME/qemu/build:/home/linuxbrew/.linuxbrew/bin
+export PATH=$PATH:$HOME/scripts/:$HOME/mukesh_tools/:$HOME/qemu/build:/home/linuxbrew/.linuxbrew/bin
 
 
 . "$HOME/.cargo/env"
