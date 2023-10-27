@@ -39,7 +39,7 @@ if [ -f ~/.mukesh_configured ]; then
 
 		git status
 
-		git commit -m "Updated at $(date "+%Y-%m-%d %H:%M:%S")"
+		git commit -s -m "Updated at $(date "+%Y-%m-%d %H:%M:%S")"
 		echo -e "\n\nPushing All configs to scripts repo\n\n"
 		git push --set-upstream origin $BRANCH
 	fi
