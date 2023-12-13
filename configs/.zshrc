@@ -135,7 +135,11 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.zsh_system ] && source ~/.zsh_system
 
 # User Defined
-if (( $+commands[nvim] ))		
+if ((  $+commands[emacsclient]  ))
+then
+	export CSCOPE_EDITOR=/usr/bin/emacsclient
+	export EDITOR='emacsclient'
+elif (( $+commands[nvim] ))
 then
 	export CSCOPE_EDITOR=/usr/bin/nvim
 	export EDITOR='nvim'

@@ -1,8 +1,10 @@
 alias gits="git status"
 
-if (( $+commands[nvim] ))		
+if (( $+commands[emacsclient] ))		
+then
+  alias vim="emacsclient"
+elif (( $+commands[nvim] ))
 then
 	alias vim="nvim"
-	alias vi="nvim"
 fi
 
