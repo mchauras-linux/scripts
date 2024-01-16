@@ -155,3 +155,6 @@ export SAVEHIST=100000000
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Created by `userpath` on 2024-01-04 18:46:51
+export PATH="$PATH:/home/mchauras/.local/bin"
