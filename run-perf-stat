@@ -3,17 +3,18 @@
 # Check the number of arguments provided
 if [ "$#" -ne 1 ]; then
     echo "Usage:"
-    echo "run.sh <base_slice>"
+    echo "$0 <base_slice>"
     exit 1
 fi
 
 mkdir -p result
 mkdir -p result/$(($1/1000000))ms
 BASE_DIR=result/$(($1/1000000))ms
-NUM_OF_ITER=10
-THREADS=104
-TIME=120
+NUM_OF_ITER=5
+THREADS=16
+TIME=30
 MIN_GRAN=$1
+echo "The test is running for $NUM_OF_ITER times, each for upto $THREADS threads for $TIME sec" >> test_config
 
 # Function to create an incremented file name if it doesn't exist
 create_incremented_file() {
@@ -28,29 +29,25 @@ create_incremented_file() {
     echo "$new_file"
 }
 
-function run_ebizzy() {
+function run_test() {
 	local FILE=$(create_incremented_file $OP_FILE)
 	echo $MIN_GRAN > /sys/kernel/debug/sched/base_slice_ns
 	cat /sys/kernel/debug/sched/base_slice_ns >> $FILE 
 	#cat /proc/sys/kernel/sched_cfs_bandwidth_slice_us >> $OP_FILE
 	echo 0 > /proc/sys/kernel/nmi_watchdog
-	CMD="./ebizzy -t $THREADS -S $TIME" 
+	#CMD="./ebizzy -t $THREADS -S $TIME" 
+	CMD="stress-ng --cpu $1 -t $TIME" 
 	echo $CMD
-	perf stat -o $FILE $CMD > $FILE.ebizzy
+	perf stat -o $FILE $CMD > $FILE.temp
 	echo 1 > /proc/sys/kernel/nmi_watchdog
-	cat $FILE.ebizzy >> $FILE
-	rm $FILE.ebizzy
+	cat $FILE.temp >> $FILE
+	rm $FILE.temp
 }
-for ((j = 104; j <= 2080; j = j + 104)); do
-	THREADS=$j
-	mkdir -p $BASE_DIR/$THREADS
-	OP_FILE=$BASE_DIR/$THREADS/exp
+for ((j = 1; j <= THREADS; j++)); do
+	mkdir -p $BASE_DIR/$j
+	OP_FILE=$BASE_DIR/$j/exp
 	for ((i = 1; i <= NUM_OF_ITER; i++)); do
-		echo "Running $i iteration"
-		echo "no of threads $THREADS"
-		run_ebizzy
+		echo "Running $i iteration with $j no of threads at base slice $(($1/1000000))ms"
+		run_test $j
 	done
 done
-
-
-
