@@ -4,9 +4,34 @@ import sys
 import os
 import matplotlib.pyplot as plt
 
-#plt.rcParams.update({'font.size': 18})  # Set the font size globally
-fig, (cpuplt, vmplt, memplt) = plt.subplots(3, 1, figsize=(30, 15))
+plt.rcParams.update({'font.size': 18})  # Set the font size globally
+fig, axes = plt.subplots(2, 2, figsize=(60, 30))
+(cpuplt, vmplt), (memplt, rpplt) = axes
 file_path = ""
+
+def read_rp_data(file_path):
+    iterations = []
+    run_thr = []
+    with open(file_path, 'r') as file:
+        for line in file:
+            if line.startswith('PROC'):
+                parts = line.split(',')
+                iteration_part = parts[1]
+                if iteration_part.startswith('T'):
+                    iteration = int(iteration_part[1:])  # Extract the iteration number (removing the initial 'T')
+                    r_t = float(parts[2])
+                    iterations.append(iteration)
+                    run_thr.append(r_t)
+    return iterations, run_thr
+
+def plot_rp_data(iterations, r_t):
+    global file_path
+    rpplt.plot(iterations, r_t, label='Runnable Threads', color='red')
+    rpplt.set_xlabel('Iteration')
+    rpplt.set_ylabel('Runnable Threads')
+    rpplt.set_title(file_path)
+    rpplt.legend()
+    rpplt.grid(True)
 
 def read_mem_data(file_path):
     iterations = []
@@ -129,6 +154,9 @@ def main():
 
     iterations, mem_total, mem_free = read_mem_data(file_path)
     plot_mem_data(iterations, mem_total, mem_free)
+    
+    iterations, r_p = read_rp_data(file_path)
+    plot_rp_data(iterations, r_p)
     
     plt.savefig(remove_all_extensions(file_path)) 
     plt.show()
