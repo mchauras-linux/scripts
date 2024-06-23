@@ -17,6 +17,7 @@ if [ -f ~/.mukesh_configured ]; then
 	cp ~/.tmux.conf $CONFIG
 	cp -rf $CONFIG_NEOVIM $CONFIG
 	cp ~/.spacemacs $CONFIG
+	cp ~/.gdbinit $CONFIG
 
 	if [[ $(git status --porcelain) ]]; then
 		git checkout -b $BRANCH
@@ -32,7 +33,8 @@ if [ -f ~/.mukesh_configured ]; then
 			configs/.tmux.conf \
 			configs/nvim/* \
 			configs/.spacemacs \
-			configs/.zsh_aliases
+			configs/.zsh_aliases \
+			configs/.gdbinit
 
 		git add mukesh-*
 		git add docs
