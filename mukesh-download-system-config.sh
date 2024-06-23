@@ -16,6 +16,7 @@ cp $CONFIG/.zsh_func ~/
 cp $CONFIG/.p10k.zsh ~/
 cp $CONFIG/.tmux.conf ~/
 cp $CONFIG/.spacemacs ~/
+cp $CONFIG/.gdbinit ~/
 cp -rf $CONFIG/nvim ~/.config
 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
