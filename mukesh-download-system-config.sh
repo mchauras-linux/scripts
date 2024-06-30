@@ -19,7 +19,9 @@ cp $CONFIG/.spacemacs ~/
 cp $CONFIG/.gdbinit ~/
 cp -rf $CONFIG/nvim ~/.config
 
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+if [ ! -d ~/.emacs.d ]; then
+	git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+fi
 
 if [ ! -d ~/.oh-my-zsh ]; then
 
