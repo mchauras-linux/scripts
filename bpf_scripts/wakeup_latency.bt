@@ -1,0 +1,37 @@
+#!/usr/bin/bpftrace
+
+#include <linux/sched.h>
+
+BEGIN {
+	@c = 0;
+}
+
+kprobe:wake_up_new_task
+{
+	$p = (struct task_struct *) arg0;
+	@new[$p->pid] = nsecs;
+	@wul[$p->pid] = 0;
+	@c += 1;
+	if(@c > 3600) {
+		exit();
+	}
+}
+
+tracepoint:sched:sched_switch
+{
+	if(@new[args->next_pid]) {
+		if(@wul[args->next_pid] == 0) {
+			$diff = nsecs - @new[args->next_pid];
+			@latency = hist($diff);
+			@new[args->next_pid] = $diff;
+			@ = stats($diff);
+			@wul[args->next_pid] = 1;
+		}
+	}
+}
+
+END {
+	clear(@new);
+	clear(@wul);
+
+}

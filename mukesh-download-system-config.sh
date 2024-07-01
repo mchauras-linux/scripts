@@ -17,6 +17,7 @@ cp $CONFIG/.p10k.zsh ~/
 cp $CONFIG/.tmux.conf ~/
 cp $CONFIG/.spacemacs ~/
 cp $CONFIG/.gdbinit ~/
+cp $CONFIG/.notmuch-config ~/
 cp -rf $CONFIG/nvim ~/.config
 
 if [ ! -d ~/.emacs.d ]; then
