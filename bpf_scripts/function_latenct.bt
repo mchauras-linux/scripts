@@ -1,0 +1,18 @@
+#!/usr/bin/bpftrace
+
+#include <linux/sched.h>
+
+BEGIN {
+	
+}
+
+k:get_recent_times
+{
+	@begin = nsecs
+}
+
+kretprobe:get_recent_times
+{
+	@ = hist(nsecs - @begin);
+}
+
