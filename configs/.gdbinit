@@ -2380,6 +2380,13 @@ define enable-dashboard
     python Dashboard.start()
 end
 
+define init-qemu
+    tui layout asm
+    tui layout regs all
+    target remote:1234
+    focus cmd
+end
+
 # vim: filetype=python
 # Local Variables:
 # mode: python
