@@ -58,7 +58,8 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
-     treemacs)
+     treemacs
+     notmuch)
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -599,6 +600,32 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  )
 )
+
 (require 'xcscope)
 (setq c-default-style "linux")
 (setq org-agenda-span 'month)
+(autoload 'notmuch "notmuch" "notmuch mail" t)
+(setq notmuch-show-all-multipart/alternative-parts nil) ;; Optionally, do not show all parts of multipart/alternative emails
+(setq notmuch-show-thread-subject t) ;; Show the subject of the entire thread
+(setq notmuch-show-indent-messages-width 4)
+(setq notmuch-search-oldest-first nil)
+
+
+(defun update-mail ()
+  "Update email: runs lei up --all and notmuch new."
+  (interactive)
+  (shell-command "lei up --all")
+  (shell-command "notmuch new"))
+
+
+;; Set up mail-user-agent
+(setq mail-user-agent 'message-user-agent)
+
+;; Set up SMTP settings
+(setq send-mail-function 'smtpmail-send-it
+      message-send-mail-function 'smtpmail-send-it
+      smtpmail-default-smtp-server "ap.relay.ibm.com"
+      smtpmail-smtp-server "ap.relay.ibm.com"
+      smtpmail-smtp-service 25
+      user-mail-address "mchauras@linux.ibm.com"
+      user-full-name "Mukesh Kumar Chaurasiya")
