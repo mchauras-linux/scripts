@@ -19,6 +19,7 @@ if [ -f ~/.mukesh_configured ]; then
 	cp ~/.spacemacs $CONFIG
 	cp ~/.gdbinit $CONFIG
 	cp ~/.notmuch-config $CONFIG
+	cp ~/.muttrc $CONFIG
 
 	if [[ $(git status --porcelain) ]]; then
 		git checkout -b $BRANCH
@@ -36,6 +37,7 @@ if [ -f ~/.mukesh_configured ]; then
 			configs/.spacemacs \
 			configs/.zsh_aliases \
 			configs/.gdbinit \
+			configs/.muttrc \
 			configs/.notmuch-config
 
 		git add mukesh-*
