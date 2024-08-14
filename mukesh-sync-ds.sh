@@ -24,5 +24,4 @@ mailx -s "sync-ds log"					\
 	mchauras.cron@gmail.com
 
 # Delete Log file
-rm $LOG_FILE
 rm $EMAIL_BODY_FILE

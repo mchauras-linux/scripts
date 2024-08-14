@@ -4,8 +4,9 @@ INITRD=/tmp/mukeshinitrd.img
 
 prepare() {
 	make -j$(nproc)
-	make -j$(nproc) modules_install
-	dracut $INITRD --kver=$(make kernelrelease) --force
+	sudo make -j$(nproc) modules_install
+	sudo depmod
+	sudo dracut $INITRD --kver=$(make kernelrelease) --force
 	ls $INITRD
 	echo "Rerun with --kexec option to perform kexec"
 }
