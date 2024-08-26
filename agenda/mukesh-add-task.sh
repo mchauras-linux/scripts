@@ -15,6 +15,6 @@ TASK_DESCRIPTION="$*"
 # Get the next day's date in Org mode format
 NEXT_DAY=$(date -d "tomorrow" +"%Y-%m-%d")
 
-echo -e "** TODO $TASK_DESCRIPTION\n" >> $ORG_FILE
-echo -e "  DEADLINE: <${NEXT_DAY}>\n" >> $ORG_FILE
+echo -e "** TODO $TASK_DESCRIPTION" >> $ORG_FILE
+echo -e "DEADLINE: <${NEXT_DAY}>\n" >> $ORG_FILE
 
