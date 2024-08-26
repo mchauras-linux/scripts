@@ -17,4 +17,5 @@ mv /tmp/agenda.txt /tmp/prev_agenda.txt
 if ! cmp -s /tmp/agenda.txt /tmp/prev_agenda.txt; then
 	# Send email
 	echo "Agenda has changed"
+	~/scripts/mukesh-send-agenda.sh
 fi
