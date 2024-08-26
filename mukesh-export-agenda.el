@@ -8,7 +8,7 @@
 (setq org-agenda-span 'week)
 
 ;; Generate the agenda and export it to a file
-(let ((output-file "~/agenda.txt"))  ; Change this to your desired output file
+(let ((output-file "/tmp/agenda.txt"))  ; Change this to your desired output file
   (with-temp-buffer
     (org-agenda-list)
     (org-batch-agenda "a")

@@ -15,6 +15,8 @@ if [ -f ~/.mukesh_configured ]; then
 	cp ~/.zsh_aliases $CONFIG
 	cp ~/.p10k.zsh $CONFIG
 	cp ~/.tmux.conf $CONFIG
+	cp ~/.msmtprc $CONFIG
+	cp ~/.mailrc $CONFIG
 	cp -rf $CONFIG_NEOVIM $CONFIG
 	cp ~/.spacemacs $CONFIG
 	cp ~/.gdbinit $CONFIG
@@ -33,6 +35,8 @@ if [ -f ~/.mukesh_configured ]; then
 			configs/.zsh_func \
 			configs/.p10k.zsh \
 			configs/.tmux.conf \
+			configs/.msmtprc \
+			configs/.mailrc \
 			configs/nvim/* \
 			configs/.spacemacs \
 			configs/.zsh_aliases \
