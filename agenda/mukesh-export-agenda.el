@@ -3,7 +3,7 @@
 (require 'org-agenda)
 
 (setq org-agenda-files '("~/docs/scheduler/README.org"
-			 "~/scripts/agenda.org"))  ; Adjust this to your org files
+			 "~/scripts/agenda/agenda.org"))  ; Adjust this to your org files
 
 (setq org-agenda-span 'week)
 
