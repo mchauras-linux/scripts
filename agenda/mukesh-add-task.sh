@@ -20,7 +20,7 @@ EMACS_LISP_CODE=$(cat <<EOF
 (require 'org)
 (find-file "$ORG_FILE")
 (goto-char (point-max))
-(insert "* TODO $TASK_DESCRIPTION\n")
+(insert "** TODO $TASK_DESCRIPTION\n")
 (insert "  DEADLINE: <${NEXT_DAY}>")
 (save-buffer)
 (kill-emacs)
