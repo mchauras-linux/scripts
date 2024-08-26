@@ -3,9 +3,12 @@
 ** TODO Ask on IRC for MM patch
 DEADLINE: <2024-08-27>
 
-** TODO Update github issue
-DEADLINE: <2024-08-27>
+** DONE Update github issue
+CLOSED: [2024-08-27 Tue 00:57] DEADLINE: <2024-08-27 Tue>
 
 ** TODO Update agenda mail to html format
 DEADLINE: <2024-09-09 Mon>
+
+** TODO Talk to Amit regarding prctrl call
+DEADLINE: <2024-08-28>
 
