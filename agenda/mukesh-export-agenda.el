@@ -5,7 +5,7 @@
 (setq org-agenda-files '("~/docs/scheduler/README.org"
 			 "~/scripts/agenda/agenda.org"))  ; Adjust this to your org files
 
-(setq org-agenda-span 'week)
+(setq org-agenda-span 'month)
 
 ;; Generate the agenda and export it to a file
 (let ((output-file "/tmp/agenda.txt"))  ; Change this to your desired output file
