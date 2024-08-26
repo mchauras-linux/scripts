@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-subject="Agenda for the week"
+subject="Agenda for the month"
 recipient="mchauras@hotmail.com"
 cc_recipients="-c mukeshmike9@gmail.com -c mukesh.chaurasiya@ibm.com"
 file_to_send="/tmp/agenda.txt"
