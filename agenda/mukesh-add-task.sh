@@ -7,7 +7,7 @@ if [ "$#" -lt 1 ]; then
 fi
 
 # Path to the Org file
-ORG_FILE="$HOME/docs/scheduler/README.org"
+ORG_FILE="$HOME/scripts/agenda/agenda.org"
 
 # Combine all command-line arguments into a single task description
 TASK_DESCRIPTION="$*"
