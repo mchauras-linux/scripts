@@ -1,0 +1,38 @@
+#!/usr/bin/bpftrace
+
+#include <linux/sched.h>
+
+BEGIN {
+	@c = 0;
+}
+
+k:pick_next_entity
+{
+	@pne[cpu] = nsecs;
+}
+
+kr:pick_next_entity
+{
+	@pneh = hist((nsecs - @pne[cpu]) - @eevdfc[cpu]);
+	@pne_fast_time = stats(nsecs - @pne[cpu] - @eevdfc[cpu]);
+	@pne_w_eevdf = hist((nsecs - @pne[cpu]));
+
+	delete(@eevdfc[cpu]);
+}
+
+kprobe:pick_eevdf
+{
+	@eevdf[cpu] = nsecs;
+	@c += 1;
+	if(@c > 4000) {
+		exit();
+	}
+}
+
+kretprobe:pick_eevdf
+{
+	@eevdfc[cpu] = nsecs - @eevdf[cpu];
+	@eevdfh = hist(@eevdfc[cpu]);
+	@pne_slow_time = stats(@eevdfc[cpu]);
+}
+

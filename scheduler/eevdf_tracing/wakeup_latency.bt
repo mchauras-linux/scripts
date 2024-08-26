@@ -1,0 +1,41 @@
+#!/usr/bin/bpftrace
+
+#include <linux/sched.h>
+
+k:pick_next_entity
+{
+	@pne[tid] = nsecs;
+}
+
+kr:pick_next_entity
+{
+	if (@pne[tid]) {
+		$time = nsecs - @pne[tid];
+		// if ($time > 1000000000) {
+		// 	print("time: ");
+		// 	print($time);
+		// 	print("pne: ");
+		// 	print(@pne);
+		// 	print("tid: ");
+		// 	print(tid);
+		// 	print("nsecs: ");
+		// 	print(nsecs);
+		// 	exit();
+		// }
+
+		if (@slow_path[tid] == 1) {
+			@pneh_slow = hist($time);
+			@pne_stat_slow = stats($time);
+		} else {
+			@pneh_fast = hist($time);
+			@pne_stat_fast = stats($time);
+		}
+
+		@slow_path[tid] = 0;
+	}
+}
+
+kprobe:pick_eevdf
+{
+	@slow_path[tid] = 1;
+}

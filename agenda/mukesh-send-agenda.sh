@@ -10,5 +10,6 @@ body="Agenda for the month is:
 "
 # Use mutt to send the email
 #echo "$body" | /usr/bin/mailx -s "$subject" $cc_recipients -a $file_to_send -C "Content-Type: text/html" $recipient
-echo "$body" | /usr/bin/mailx -s "$subject" $cc_recipients -C "Content-Type: text/html" $recipient
+#echo "$body" | /usr/bin/mailx -s "$subject" $cc_recipients -C "Content-Type: text/html" $recipient
+echo "$body" | /usr/bin/mailx -s "$subject" $cc_recipients $recipient
 
