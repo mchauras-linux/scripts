@@ -1,6 +1,7 @@
 ;; export-agenda.el
 (require 'org)
 (require 'org-agenda)
+(require 'htmlize)
 
 (setq org-agenda-files '("~/docs/scheduler/README.org"
 			 "~/scripts/agenda/agenda.org"))  ; Adjust this to your org files
