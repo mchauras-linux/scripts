@@ -9,5 +9,6 @@ body="Agenda for this week is:
 `cat $file_to_send`
 "
 # Use mutt to send the email
-echo "$body" | /usr/bin/mailx -s "$subject" $cc_recipients -a $file_to_send $recipient
+#echo "$body" | /usr/bin/mailx -s "$subject" $cc_recipients -a $file_to_send $recipient
+echo "$body" | /usr/bin/mailx -s "$subject" $cc_recipients $recipient
 
