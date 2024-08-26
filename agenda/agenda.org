@@ -1,8 +1,8 @@
 * Agenda
 
-** TODO Test out the agenda setup
-DEADLINE: <2024-08-27 Tue>
+** DONE Test out the agenda setup
+CLOSED: [2024-08-26 Mon 13:58] DEADLINE: <2024-08-27 Tue>
 
-** TODO Test agenda
-DEADLINE: <2024-08-27>
+** DONE Test agenda
+CLOSED: [2024-08-26 Mon 13:58] DEADLINE: <2024-08-27>
 

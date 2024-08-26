@@ -2,11 +2,9 @@
 
 cd ~/scripts
 
-git pull --rebase
-
-
 if [[ $(git status agenda --porcelain) ]]; then
 	git add agenda
+	git pull --rebase
 	git commit -s -m "Auto Updating Agenda"
 	git push
 fi
