@@ -1,8 +1,8 @@
 * Agenda
 
-** DONE Test out the agenda setup
-CLOSED: [2024-08-26 Mon 13:58] DEADLINE: <2024-08-27 Tue>
+** TODO Ask on IRC for MM patch
+DEADLINE: <2024-08-27>
 
-** DONE Test agenda
-CLOSED: [2024-08-26 Mon 13:58] DEADLINE: <2024-08-27>
+** TODO Update github issue
+DEADLINE: <2024-08-27>
 
