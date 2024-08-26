@@ -8,7 +8,7 @@ fi
 
 # Path to the Org file
 ORG_FILE="$HOME/scripts/agenda/agenda.org"
-
+cat $ORG_FILE
 # Combine all command-line arguments into a single task description
 TASK_DESCRIPTION="$*"
 
