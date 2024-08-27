@@ -1,7 +1,7 @@
 * Agenda
 
 ** TODO Ask on IRC for MM patch
-DEADLINE: <2024-08-27 Tue>
+DEADLINE: <2024-08-26 Mon>
 
 ** DONE Update github issue
 CLOSED: [2024-08-27 Tue 00:57] DEADLINE: <2024-08-27 Tue>
