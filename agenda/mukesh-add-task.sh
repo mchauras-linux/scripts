@@ -40,4 +40,4 @@ echo -e "** TODO $task" >> $ORG_FILE
 echo -e "DEADLINE: <${deadline_date}>\n" >> $ORG_FILE
 
 
-$HOME/scripts/agenda/mukesh-get-agenda.sh
+$HOME/scripts/agenda/mukesh-get-agenda.sh > /dev/null &
