@@ -38,4 +38,9 @@ DEADLINE: <2024-08-29 Thu>
 
 ** TODO 1x1 Meeting
 DEADLINE: <2024-08-30 Fri>
+** TODO CPU Team meeting
+DEADLINE: <2024-09-02 Mon>
+
+** TODO Donets Wedding
+DEADLINE: <2024-09-07 Sat>
 
