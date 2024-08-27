@@ -12,6 +12,12 @@ CLOSED: [2024-08-27 Tue 02:38] DEADLINE: <2024-09-09 Mon>
 ** TODO Talk to Amit regarding prctrl call
 DEADLINE: <2024-08-28>
 
-** TODO Take Car to showroom
+** DONE Take Car to showroom
+CLOSED: [2024-08-27 Tue 12:35] DEADLINE: <2024-08-28>
+
+** TODO Take Cycle for repair
+DEADLINE: <2024-08-28>
+
+** TODO Org Reg
 DEADLINE: <2024-08-28>
 
