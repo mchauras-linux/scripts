@@ -21,3 +21,6 @@ DEADLINE: <2024-08-28>
 ** TODO Org Reg
 DEADLINE: <2024-08-28>
 
+** TODO Takhat Inquiry
+DEADLINE: <2024-08-28>
+
