@@ -44,3 +44,6 @@ DEADLINE: <2024-09-02 Mon>
 ** TODO Donets Wedding
 DEADLINE: <2024-09-07 Sat>
 
+** TODO Buy Donet's Wedding Gift
+DEADLINE: <2024-08-31 Sat>
+
