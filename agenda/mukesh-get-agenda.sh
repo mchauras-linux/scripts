@@ -11,7 +11,7 @@ fi
 
 mv /tmp/agenda.html /tmp/prev_agenda.html
 #/usr/bin/emacs -batch -l ~/scripts/agenda/mukesh-export-agenda.el
-emacs --eval '(progn                                                                                                                                                              97% ─╯
+emacs --eval '(progn
                  (setq org-agenda-files (list "~/scripts/agenda/agenda.org"))              
                  (org-agenda-list)
                  (org-agenda-write (expand-file-name "/tmp/agenda.html"))
