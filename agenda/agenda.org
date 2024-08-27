@@ -1,7 +1,7 @@
 * Agenda
 
 ** TODO Ask on IRC for MM patch
-DEADLINE: <2024-08-27>
+DEADLINE: <2024-08-27 Tue>
 
 ** DONE Update github issue
 CLOSED: [2024-08-27 Tue 00:57] DEADLINE: <2024-08-27 Tue>
@@ -10,20 +10,20 @@ CLOSED: [2024-08-27 Tue 00:57] DEADLINE: <2024-08-27 Tue>
 CLOSED: [2024-08-27 Tue 02:38] DEADLINE: <2024-09-09 Mon>
 
 ** TODO Talk to Amit regarding prctrl call
-DEADLINE: <2024-08-28>
+DEADLINE: <2024-08-27 Tue>
 
 ** DONE Take Car to showroom
 CLOSED: [2024-08-27 Tue 12:35] DEADLINE: <2024-08-28>
 
 ** TODO Take Cycle for repair
-DEADLINE: <2024-08-28>
+DEADLINE: <2024-09-01 Sun>
 
 ** TODO Org Reg
-DEADLINE: <2024-08-28>
+DEADLINE: <2024-09-08 Sun>
 
 ** TODO Takhat Inquiry
-DEADLINE: <2024-08-28>
+DEADLINE: <2024-08-31 Sat>
 
 ** TODO Get Qemu Performance
-DEADLINE: <2024-08-28>
+DEADLINE: <2024-08-27 Tue>
 
