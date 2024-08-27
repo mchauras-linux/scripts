@@ -18,8 +18,6 @@ fi
 deadline_day="$1"
 task="$2"
 
-echo "Task is: $2"
-
 # Check if deadline_day is a valid number
 if ! [[ "$deadline_day" =~ ^[0-9]+$ ]]; then
     echo -e "Error: <deadline> must be a positive integer\n"
@@ -40,4 +38,4 @@ echo -e "** TODO $task" >> $ORG_FILE
 echo -e "DEADLINE: <${deadline_date}>\n" >> $ORG_FILE
 
 
-$HOME/scripts/agenda/mukesh-get-agenda.sh > /dev/null &
+#$HOME/scripts/agenda/mukesh-get-agenda.sh > /dev/null &
