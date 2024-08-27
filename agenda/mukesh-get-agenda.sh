@@ -10,7 +10,7 @@ if [[ $(git status agenda --porcelain) ]]; then
 fi
 
 mv /tmp/agenda.html /tmp/prev_agenda.html
-/usr/bin/emacs -batch -l ~/scripts/agenda/mukesh-export-agenda.el -e ~/.spacemacs
+/usr/bin/emacs -batch -l ~/scripts/agenda/mukesh-export-agenda.el
 
 if ! cmp -s /tmp/agenda.html /tmp/prev_agenda.html; then
 	# Send email
