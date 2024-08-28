@@ -1,2 +1,2 @@
-set sendmail="/usr/bin/msmtp"
-
+set mta="/usr/bin/msmtp"
+set from="mchauras.linux@gmail.com"
