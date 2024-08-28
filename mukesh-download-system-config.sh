@@ -15,6 +15,8 @@ cp $CONFIG/.zsh_aliases ~/
 cp $CONFIG/.zsh_func ~/
 cp $CONFIG/.p10k.zsh ~/
 cp $CONFIG/.tmux.conf ~/
+cp $CONFIG/.msmtprc ~/
+cp $CONFIG/.mailrc ~/
 cp $CONFIG/.spacemacs ~/
 cp $CONFIG/.gdbinit ~/
 cp $CONFIG/.notmuch-config ~/
