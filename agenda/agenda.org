@@ -47,3 +47,18 @@ DEADLINE: <2024-09-07 Sat>
 ** TODO Buy Donet's Wedding Gift
 DEADLINE: <2024-08-31 Sat>
 
+** TODO Ask dad to go to village
+DEADLINE: <2024-08-31 Sat>
+
+** TODO Take a follow up on Land
+DEADLINE: <2024-09-01 Sun>
+
+** TODO Implement MM patch with seq buffer
+DEADLINE: <2024-08-30 Fri>
+
+** TODO Goto Ojaswin's Dad
+DEADLINE: <2024-08-29 Thu>
+
+** TODO Talk to Ojaswin about Org
+DEADLINE: <2024-09-07 Sat>
+
