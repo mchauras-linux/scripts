@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 # Define variables
 subject="Agenda at `date`"
 recipient="mchauras@hotmail.com"
