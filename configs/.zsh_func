@@ -58,3 +58,7 @@ copy-to-clipboard() {
   echo "File contents copied to clipboard."
 }
 
+addtask() {
+	args="${@:2}"
+	~/scripts/agenda/mukesh-add-task.sh $1 "$args"
+}
