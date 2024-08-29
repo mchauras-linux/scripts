@@ -30,11 +30,11 @@ CLOSED: [2024-08-29 Thu 01:17] DEADLINE: <2024-08-27 Tue>
 ** DONE upstream reviews: take a look at it
 CLOSED: [2024-08-29 Thu 01:17] DEADLINE: <2024-08-27 Tue>
 
-** TODO upstream reviews: take a look at it
-DEADLINE: <2024-08-28 Wed>
+** DONE upstream reviews: take a look at it
+CLOSED: [2024-08-29 Thu 14:54] DEADLINE: <2024-08-28 Wed>
 
-** TODO Team Meeting
-DEADLINE: <2024-08-29 Thu>
+** DONE Team Meeting
+CLOSED: [2024-08-29 Thu 14:53] DEADLINE: <2024-08-29 Thu>
 
 ** TODO 1x1 Meeting
 DEADLINE: <2024-08-30 Fri>
@@ -61,4 +61,10 @@ DEADLINE: <2024-08-29 Thu>
 
 ** TODO Talk to Ojaswin about Org
 DEADLINE: <2024-09-07 Sat>
+
+** TODO Look at ppc tasks and complete them
+DEADLINE: <2024-09-01 Sun>
+
+** TODO upstream reviews: take a look at it
+DEADLINE: <2024-08-30 Fri>
 
