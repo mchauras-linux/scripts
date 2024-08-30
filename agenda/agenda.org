@@ -36,8 +36,8 @@ CLOSED: [2024-08-29 Thu 14:54] DEADLINE: <2024-08-28 Wed>
 ** DONE Team Meeting
 CLOSED: [2024-08-29 Thu 14:53] DEADLINE: <2024-08-29 Thu>
 
-** TODO 1x1 Meeting
-DEADLINE: <2024-08-30 Fri>
+** DONE 1x1 Meeting
+CLOSED: [2024-08-30 Fri 16:37] DEADLINE: <2024-08-30 Fri>
 ** TODO CPU Team meeting
 DEADLINE: <2024-09-02 Mon>
 
@@ -104,6 +104,6 @@ DEADLINE: <2024-09-27 Fri>
 ** TODO pay sbi cc bill
 DEADLINE: <2024-09-26 Thu>
 
-** TODO give 1000 back to kotak
-DEADLINE: <2024-08-30 Fri>
+** DONE give 1000 back to kotak
+CLOSED: [2024-08-30 Fri 16:37] DEADLINE: <2024-08-30 Fri>
 
