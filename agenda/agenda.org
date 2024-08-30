@@ -68,3 +68,42 @@ DEADLINE: <2024-09-01 Sun>
 ** TODO upstream reviews: take a look at it
 DEADLINE: <2024-08-30 Fri>
 
+** TODO pay rent
+DEADLINE: <2024-09-04 Wed>
+
+** TODO invest mutual funds
+DEADLINE: <2024-09-11 Wed>
+
+** TODO pay homeloan emi
+DEADLINE: <2024-09-10 Tue>
+
+** TODO pay car loan emi
+DEADLINE: <2024-09-10 Tue>
+
+** TODO pay homeloan insurance
+DEADLINE: <2024-09-10 Tue>
+
+** TODO pay icici cc bill
+DEADLINE: <2024-09-10 Tue>
+
+** TODO pay hdfc cc bill
+DEADLINE: <2024-09-05 Thu>
+
+** TODO pay donets wedding gift
+DEADLINE: <2024-08-31 Sat>
+
+** TODO pay personal loan emi
+DEADLINE: <2024-09-06 Fri>
+
+** TODO pay electricity mugalaha
+DEADLINE: <2024-09-27 Fri>
+
+** TODO pay electricity manyata
+DEADLINE: <2024-09-27 Fri>
+
+** TODO pay sbi cc bill
+DEADLINE: <2024-09-26 Thu>
+
+** TODO give 1000 back to kotak
+DEADLINE: <2024-08-30 Fri>
+
