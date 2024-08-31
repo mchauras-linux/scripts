@@ -4,7 +4,7 @@
 subject="Agenda at `date`"
 recipient="mchauras@hotmail.com"
 cc_recipients="-c mukeshmike9@gmail.com -c mukesh.chaurasiya@ibm.com -c mukesh@mchauras.com"
-file_to_send="~/.agenda.html"
+file_to_send="$HOME/.agenda.html"
 body="Agenda for the month is:
 `cat $file_to_send`
 "
