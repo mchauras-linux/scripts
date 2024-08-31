@@ -21,8 +21,8 @@ DEADLINE: <2024-08-31 Sat>
 ** TODO Org Reg
 DEADLINE: <2024-09-08 Sun>
 
-** TODO Takhat Inquiry
-DEADLINE: <2024-08-31 Sat>
+** DONE Takhat Inquiry
+CLOSED: [2024-09-01 Sun 02:08] DEADLINE: <2024-08-31 Sat>
 
 ** DONE Get Qemu Performance
 CLOSED: [2024-08-29 Thu 01:17] DEADLINE: <2024-08-27 Tue>
