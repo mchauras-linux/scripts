@@ -65,8 +65,8 @@ DEADLINE: <2024-09-07 Sat>
 ** TODO Look at ppc tasks and complete them
 DEADLINE: <2024-09-01 Sun>
 
-** TODO upstream reviews: take a look at it
-DEADLINE: <2024-08-30 Fri>
+** DONE upstream reviews: take a look at it
+CLOSED: [2024-09-01 Sun 02:08] DEADLINE: <2024-08-30 Fri>
 
 ** TODO pay rent
 DEADLINE: <2024-09-04 Wed>
