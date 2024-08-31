@@ -17,7 +17,7 @@ mv $AGENDA_FILE $TEMP_AGENDA_FILE
 emacs --eval '(progn
                  (setq org-agenda-files (list "~/scripts/agenda/agenda.org"))              
                  (org-agenda-list)
-                 (org-agenda-write (expand-file-name "$HOME/.agenda.html"))
+                 (org-agenda-write (expand-file-name "~/.agenda.html"))
                  (save-buffers-kill-emacs))'
 
 if ! cmp -s $AGENDA_FILE $TEMP_AGENDA_FILE; then
