@@ -1,7 +1,7 @@
 #! /bin/bash
 
-AGENDA_FILE="~/.agenda.html"
-TEMP_AGENDA_FILE="~/.agenda_temp.html"
+AGENDA_FILE="$HOME/.agenda.html"
+TEMP_AGENDA_FILE="$HOME/.agenda_temp.html"
 
 cd ~/scripts
 
@@ -17,7 +17,7 @@ mv $AGENDA_FILE $TEMP_AGENDA_FILE
 emacs --eval '(progn
                  (setq org-agenda-files (list "~/scripts/agenda/agenda.org"))              
                  (org-agenda-list)
-                 (org-agenda-write (expand-file-name "~/.agenda.html"))
+                 (org-agenda-write (expand-file-name "$HOME/.agenda.html"))
                  (save-buffers-kill-emacs))'
 
 if ! cmp -s $AGENDA_FILE $TEMP_AGENDA_FILE; then
