@@ -15,8 +15,8 @@ CLOSED: [2024-08-29 Thu 01:17] DEADLINE: <2024-08-27 Tue>
 ** DONE Take Car to showroom
 CLOSED: [2024-08-27 Tue 12:35] DEADLINE: <2024-08-28>
 
-** TODO Take Cycle for repair
-DEADLINE: <2024-08-31 Sat>
+** DONE Take Cycle for repair
+CLOSED: [2024-09-03 Tue 15:00] DEADLINE: <2024-08-31 Sat>
 
 ** TODO Org Reg
 DEADLINE: <2024-09-08 Sun>
@@ -38,8 +38,8 @@ CLOSED: [2024-08-29 Thu 14:53] DEADLINE: <2024-08-29 Thu>
 
 ** DONE 1x1 Meeting
 CLOSED: [2024-08-30 Fri 16:37] DEADLINE: <2024-08-30 Fri>
-** TODO CPU Team meeting
-DEADLINE: <2024-09-02 Mon>
+** DONE CPU Team meeting
+CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-09-02 Mon>
 
 ** TODO Donets Wedding
 DEADLINE: <2024-09-07 Sat>
@@ -47,17 +47,17 @@ DEADLINE: <2024-09-07 Sat>
 ** TODO Buy Donet's Wedding Gift
 DEADLINE: <2024-08-31 Sat>
 
-** TODO Ask dad to go to village
-DEADLINE: <2024-08-31 Sat>
+** DONE Ask dad to go to village
+CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-08-31 Sat>
 
-** TODO Take a follow up on Land
-DEADLINE: <2024-09-01 Sun>
+** DONE Take a follow up on Land
+CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-09-01 Sun>
 
 ** TODO Implement MM patch with seq buffer
 DEADLINE: <2024-08-30 Fri>
 
-** TODO Goto Ojaswin's Dad
-DEADLINE: <2024-08-29 Thu>
+** DONE Goto Ojaswin's Dad
+CLOSED: [2024-09-03 Tue 15:00] DEADLINE: <2024-09-03 Tue>
 
 ** TODO Talk to Ojaswin about Org
 DEADLINE: <2024-09-07 Sat>
@@ -68,8 +68,8 @@ DEADLINE: <2024-09-01 Sun>
 ** DONE upstream reviews: take a look at it
 CLOSED: [2024-09-01 Sun 02:08] DEADLINE: <2024-08-30 Fri>
 
-** TODO pay rent
-DEADLINE: <2024-09-04 Wed>
+** DONE pay rent
+CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-09-04 Wed>
 
 ** TODO invest mutual funds
 DEADLINE: <2024-09-11 Wed>
