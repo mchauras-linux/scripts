@@ -107,3 +107,6 @@ DEADLINE: <2024-09-26 Thu>
 ** DONE give 1000 back to kotak
 CLOSED: [2024-08-30 Fri 16:37] DEADLINE: <2024-08-30 Fri>
 
+** TODO send docs to naveenath
+DEADLINE: <2024-09-03 Tue>
+
