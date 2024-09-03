@@ -110,3 +110,6 @@ CLOSED: [2024-08-30 Fri 16:37] DEADLINE: <2024-08-30 Fri>
 ** TODO send docs to naveenath
 DEADLINE: <2024-09-03 Tue>
 
+** TODO IMPORTANT:SCHED:Look into hrtimer_active in entity tick, why this thing is being called although it serves no purpose
+DEADLINE: <2024-09-04 Wed>
+
