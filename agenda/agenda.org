@@ -113,3 +113,12 @@ DEADLINE: <2024-09-03 Tue>
 ** TODO IMPORTANT:SCHED:Look into hrtimer_active in entity tick, why this thing is being called although it serves no purpose
 DEADLINE: <2024-09-04 Wed>
 
+** TODO Complete your work with qemu core scheduler
+DEADLINE: <2024-09-04 Wed>
+
+** TODO get the computation sheet for ITR
+DEADLINE: <2024-09-04 Wed>
+
+** TODO get the container build running on power suggested by maddy
+DEADLINE: <2024-09-04 Wed>
+
