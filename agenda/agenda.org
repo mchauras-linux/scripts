@@ -44,8 +44,8 @@ CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-09-02 Mon>
 ** TODO Donets Wedding
 DEADLINE: <2024-09-07 Sat>
 
-** TODO Buy Donet's Wedding Gift
-DEADLINE: <2024-08-31 Sat>
+** DONE Buy Donet's Wedding Gift
+CLOSED: [2024-09-04 Wed 11:48] DEADLINE: <2024-08-31 Sat>
 
 ** DONE Ask dad to go to village
 CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-08-31 Sat>
@@ -107,8 +107,8 @@ DEADLINE: <2024-09-26 Thu>
 ** DONE give 1000 back to kotak
 CLOSED: [2024-08-30 Fri 16:37] DEADLINE: <2024-08-30 Fri>
 
-** TODO send docs to naveenath
-DEADLINE: <2024-09-03 Tue>
+** DONE send docs to naveenath
+CLOSED: [2024-09-04 Wed 11:48] DEADLINE: <2024-09-03 Tue>
 
 ** TODO IMPORTANT:SCHED:Look into hrtimer_active in entity tick, why this thing is being called although it serves no purpose
 DEADLINE: <2024-09-04 Wed>
@@ -116,9 +116,15 @@ DEADLINE: <2024-09-04 Wed>
 ** TODO Complete your work with qemu core scheduler
 DEADLINE: <2024-09-04 Wed>
 
-** TODO get the computation sheet for ITR
-DEADLINE: <2024-09-04 Wed>
+** DONE get the computation sheet for ITR
+CLOSED: [2024-09-04 Wed 11:48] DEADLINE: <2024-09-04 Wed>
 
 ** TODO get the container build running on power suggested by maddy
 DEADLINE: <2024-09-04 Wed>
+
+** TODO create finance website
+DEADLINE: <2024-12-03 Tue>
+
+** TODO create transcribe website
+DEADLINE: <2024-12-03 Tue>
 
