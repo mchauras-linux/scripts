@@ -131,3 +131,8 @@ DEADLINE: <2024-12-03 Tue>
 ** TODO read about maple tree
 DEADLINE: <2024-09-05 Thu>
 
+** TODO URGENT: Prep LinuxEndPoint
+DEADLINE: <2024-09-16 Mon>
+
+** TODO URGENT: LinuxEndPoint
+DEADLINE: <2024-09-17 Tue>
