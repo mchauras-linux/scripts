@@ -41,8 +41,8 @@ CLOSED: [2024-08-30 Fri 16:37] DEADLINE: <2024-08-30 Fri>
 ** DONE CPU Team meeting
 CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-09-02 Mon>
 
-** TODO Donets Wedding
-DEADLINE: <2024-09-07 Sat>
+** DONE Donets Wedding
+CLOSED: [2024-09-08 Sun 10:48] DEADLINE: <2024-09-07 Sat>
 
 ** DONE Buy Donet's Wedding Gift
 CLOSED: [2024-09-04 Wed 11:48] DEADLINE: <2024-08-31 Sat>
@@ -89,11 +89,11 @@ DEADLINE: <2024-09-10 Tue>
 ** DONE pay hdfc cc bill
 CLOSED: [2024-09-05 Thu 17:10] DEADLINE: <2024-09-05 Thu>
 
-** TODO pay donets wedding gift
-DEADLINE: <2024-08-31 Sat>
+** DONE pay donets wedding gift
+CLOSED: [2024-09-08 Sun 10:48] DEADLINE: <2024-08-31 Sat>
 
-** TODO pay personal loan emi
-DEADLINE: <2024-09-06 Fri>
+** DONE pay personal loan emi
+CLOSED: [2024-09-08 Sun 10:48] DEADLINE: <2024-09-06 Fri>
 
 ** TODO pay electricity mugalaha
 DEADLINE: <2024-09-27 Fri>
@@ -136,3 +136,6 @@ DEADLINE: <2024-09-16 Mon>
 
 ** TODO URGENT: LinuxEndPoint
 DEADLINE: <2024-09-17 Tue>
+** TODO Do ppc tasks
+DEADLINE: <2024-09-09 Mon>
+
