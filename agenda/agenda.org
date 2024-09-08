@@ -80,14 +80,14 @@ DEADLINE: <2024-09-10 Tue>
 ** TODO pay car loan emi
 DEADLINE: <2024-09-10 Tue>
 
-** TODO pay homeloan insurance
-DEADLINE: <2024-09-10 Tue>
+** DONE pay homeloan insurance
+CLOSED: [2024-09-05 Thu 17:10] DEADLINE: <2024-09-10 Tue>
 
 ** TODO pay icici cc bill
 DEADLINE: <2024-09-10 Tue>
 
-** TODO pay hdfc cc bill
-DEADLINE: <2024-09-05 Thu>
+** DONE pay hdfc cc bill
+CLOSED: [2024-09-05 Thu 17:10] DEADLINE: <2024-09-05 Thu>
 
 ** TODO pay donets wedding gift
 DEADLINE: <2024-08-31 Sat>
@@ -110,8 +110,8 @@ CLOSED: [2024-08-30 Fri 16:37] DEADLINE: <2024-08-30 Fri>
 ** DONE send docs to naveenath
 CLOSED: [2024-09-04 Wed 11:48] DEADLINE: <2024-09-03 Tue>
 
-** TODO IMPORTANT:SCHED:Look into hrtimer_active in entity tick, why this thing is being called although it serves no purpose
-DEADLINE: <2024-09-04 Wed>
+** DONE IMPORTANT:SCHED:Look into hrtimer_active in entity tick, why this thing is being called although it serves no purpose
+CLOSED: [2024-09-05 Thu 17:11] DEADLINE: <2024-09-04 Wed>
 
 ** TODO Complete your work with qemu core scheduler
 DEADLINE: <2024-09-04 Wed>
@@ -119,8 +119,8 @@ DEADLINE: <2024-09-04 Wed>
 ** DONE get the computation sheet for ITR
 CLOSED: [2024-09-04 Wed 11:48] DEADLINE: <2024-09-04 Wed>
 
-** TODO get the container build running on power suggested by maddy
-DEADLINE: <2024-09-04 Wed>
+** DONE get the container build running on power suggested by maddy
+CLOSED: [2024-09-05 Thu 17:10] DEADLINE: <2024-09-04 Wed>
 
 ** TODO create finance website
 DEADLINE: <2024-12-03 Tue>
