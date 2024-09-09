@@ -74,17 +74,17 @@ CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-09-04 Wed>
 ** TODO invest mutual funds
 DEADLINE: <2024-09-11 Wed>
 
-** TODO pay homeloan emi
-DEADLINE: <2024-09-10 Tue>
+** DONE pay homeloan emi
+CLOSED: [2024-09-10 Tue 01:37] DEADLINE: <2024-09-10 Tue>
 
-** TODO pay car loan emi
-DEADLINE: <2024-09-10 Tue>
+** DONE pay car loan emi
+CLOSED: [2024-09-10 Tue 01:37] DEADLINE: <2024-09-10 Tue>
 
 ** DONE pay homeloan insurance
 CLOSED: [2024-09-05 Thu 17:10] DEADLINE: <2024-09-10 Tue>
 
-** TODO pay icici cc bill
-DEADLINE: <2024-09-10 Tue>
+** DONE pay icici cc bill
+CLOSED: [2024-09-10 Tue 01:39] DEADLINE: <2024-09-10 Tue>
 
 ** DONE pay hdfc cc bill
 CLOSED: [2024-09-05 Thu 17:10] DEADLINE: <2024-09-05 Thu>
