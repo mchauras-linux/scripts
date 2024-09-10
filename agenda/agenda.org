@@ -145,3 +145,6 @@ DEADLINE: <2024-09-09 Mon>
 ** TODO watch video for scheduler delayed dequeue
 DEADLINE: <2024-09-11 Wed>
 
+** TODO Talk to Nysal
+DEADLINE: <2024-09-11 Wed>
+
