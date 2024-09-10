@@ -59,11 +59,11 @@ DEADLINE: <2024-08-30 Fri>
 ** DONE Goto Ojaswin's Dad
 CLOSED: [2024-09-03 Tue 15:00] DEADLINE: <2024-09-03 Tue>
 
-** TODO Talk to Ojaswin about Org
-DEADLINE: <2024-09-07 Sat>
+** DONE Talk to Ojaswin about Org
+CLOSED: [2024-09-10 Tue 19:09] DEADLINE: <2024-09-07 Sat>
 
-** TODO Look at ppc tasks and complete them
-DEADLINE: <2024-09-01 Sun>
+** DONE Look at ppc tasks and complete them
+CLOSED: [2024-09-10 Tue 19:09] DEADLINE: <2024-09-01 Sun>
 
 ** DONE upstream reviews: take a look at it
 CLOSED: [2024-09-01 Sun 02:08] DEADLINE: <2024-08-30 Fri>
@@ -113,8 +113,8 @@ CLOSED: [2024-09-04 Wed 11:48] DEADLINE: <2024-09-03 Tue>
 ** DONE IMPORTANT:SCHED:Look into hrtimer_active in entity tick, why this thing is being called although it serves no purpose
 CLOSED: [2024-09-05 Thu 17:11] DEADLINE: <2024-09-04 Wed>
 
-** TODO Complete your work with qemu core scheduler
-DEADLINE: <2024-09-04 Wed>
+** DONE Complete your work with qemu core scheduler
+CLOSED: [2024-09-10 Tue 19:09] DEADLINE: <2024-09-04 Wed>
 
 ** DONE get the computation sheet for ITR
 CLOSED: [2024-09-04 Wed 11:48] DEADLINE: <2024-09-04 Wed>
