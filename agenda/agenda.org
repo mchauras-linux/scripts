@@ -139,8 +139,8 @@ DEADLINE: <2024-09-17 Tue>
 ** TODO Do ppc tasks
 DEADLINE: <2024-09-09 Mon>
 
-** TODO get runqueue threads from debugfs
-DEADLINE: <2024-09-09 Mon>
+** DONE get runqueue threads from debugfs
+CLOSED: [2024-09-10 Tue 23:11] DEADLINE: <2024-09-09 Mon>
 
 ** TODO watch video for scheduler delayed dequeue
 DEADLINE: <2024-09-11 Wed>
