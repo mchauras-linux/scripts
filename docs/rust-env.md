@@ -32,11 +32,39 @@ make LLVM=1 -j$(nproc) CLIPPY=1
 
 git clone https://git.busybox.net/busybox
 
+In config
+Settings -> Build static binaries
+Install static glibc
+Remove all the packages which are causing build failures
+
 make -j$(nproc)
 
 make install
 
 cd _install
+
+Create rcS in /etc/init.d
+# /etc/init.d/rcS file content
+mkdir -p /proc 
+mount -t proc none /proc
+
+mkdir -p /sys 
+mount -t sysfs none /sys
+
+ifconfig lo up
+
+udhcpc -i eth0
+
+mkdir -p /dev 
+mount -t devtmpfs none /dev 
+
+mkdir -p /dev/pts 
+mount -t devpts nodev /dev/pts 
+
+mkdir -p /sys/kernel/debug 
+mount -t debugfs none /sys/kernel/debug
+# end of file rcS
+
 
 find . | cpio -H newc -o | gzip > ../ramdisk.img
 
