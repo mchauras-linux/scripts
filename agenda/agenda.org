@@ -148,3 +148,9 @@ DEADLINE: <2024-09-11 Wed>
 ** TODO Talk to Nysal
 DEADLINE: <2024-09-11 Wed>
 
+** TODO Run sysbench + mysql
+DEADLINE: <2024-09-14 Sat>
+
+** TODO Run Deathstarbench
+DEADLINE: <2024-09-14 Sat>
+
