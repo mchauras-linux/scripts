@@ -154,3 +154,15 @@ DEADLINE: <2024-09-14 Sat>
 ** TODO Run Deathstarbench
 DEADLINE: <2024-09-14 Sat>
 
+** TODO Setup ppc qemu busybox
+DEADLINE: <2024-09-13 Fri>
+
+** TODO PPC: Setup ppc qemu busybox
+DEADLINE: <2024-09-13 Fri>
+
+** TODO PPC: Locking in PPC
+DEADLINE: <2024-09-13 Fri>
+
+** TODO PPC: Lookup bootup path for linux
+DEADLINE: <2024-09-13 Fri>
+
