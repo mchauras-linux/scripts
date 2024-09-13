@@ -166,3 +166,36 @@ DEADLINE: <2024-09-13 Fri>
 ** TODO PPC: Lookup bootup path for linux
 DEADLINE: <2024-09-13 Fri>
 
+** Setup benchmarks
+*** TODO schbench
+DEADLINE: <2024-09-14 Sat>
+*** TODO hackbench
+DEADLINE: <2024-09-14 Sat>
+*** TODO cyclictest
+DEADLINE: <2024-09-14 Sat>
+*** TODO perf
+DEADLINE: <2024-09-14 Sat>
+*** TODO sched
+DEADLINE: <2024-09-14 Sat>
+*** TODO stress-ng
+DEADLINE: <2024-09-14 Sat>
+*** TODO latencytop
+DEADLINE: <2024-09-14 Sat>
+*** TODO lmbench
+DEADLINE: <2024-09-14 Sat>
+*** TODO rt-app
+DEADLINE: <2024-09-14 Sat>
+*** TODO sysbench
+DEADLINE: <2024-09-14 Sat>
+*** TODO fio
+DEADLINE: <2024-09-14 Sat>
+*** TODO pbzip2
+DEADLINE: <2024-09-14 Sat>
+*** TODO stress
+DEADLINE: <2024-09-14 Sat>
+*** TODO dbench
+DEADLINE: <2024-09-14 Sat>
+*** TODO taskset
+DEADLINE: <2024-09-14 Sat>
+*** TODO Deathstar Bench
+DEADLINE: <2024-09-15 Sun>
