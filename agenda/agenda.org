@@ -187,3 +187,6 @@ DEADLINE: <2024-09-17 Tue>
 ** TODO Finish Your work with qemu
 DEADLINE: <2024-10-16 Wed>
 
+** TODO kernel:sched:core.c pick_next_task for_each_cpu_wrap, check if this is correct
+DEADLINE: <2024-09-17 Tue>
+
