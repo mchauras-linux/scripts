@@ -19,7 +19,7 @@ CLOSED: [2024-08-27 Tue 12:35] DEADLINE: <2024-08-28>
 CLOSED: [2024-09-03 Tue 15:00] DEADLINE: <2024-08-31 Sat>
 
 ** TODO Org Reg
-DEADLINE: <2024-09-08 Sun>
+DEADLINE: <2024-09-17 Tue>
 
 ** DONE Takhat Inquiry
 CLOSED: [2024-09-01 Sun 02:10] DEADLINE: <2024-08-31 Sat>
@@ -54,7 +54,7 @@ CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-08-31 Sat>
 CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-09-01 Sun>
 
 ** TODO Implement MM patch with seq buffer
-DEADLINE: <2024-08-30 Fri>
+DEADLINE: <2024-09-17 Tue>
 
 ** DONE Goto Ojaswin's Dad
 CLOSED: [2024-09-03 Tue 15:00] DEADLINE: <2024-09-03 Tue>
@@ -72,7 +72,7 @@ CLOSED: [2024-09-01 Sun 02:08] DEADLINE: <2024-08-30 Fri>
 CLOSED: [2024-09-03 Tue 15:01] DEADLINE: <2024-09-04 Wed>
 
 ** TODO invest mutual funds
-DEADLINE: <2024-09-11 Wed>
+DEADLINE: <2024-09-17 Tue>
 
 ** DONE pay homeloan emi
 CLOSED: [2024-09-10 Tue 01:37] DEADLINE: <2024-09-10 Tue>
@@ -95,11 +95,11 @@ CLOSED: [2024-09-08 Sun 10:48] DEADLINE: <2024-08-31 Sat>
 ** DONE pay personal loan emi
 CLOSED: [2024-09-08 Sun 10:48] DEADLINE: <2024-09-06 Fri>
 
-** TODO pay electricity mugalaha
-DEADLINE: <2024-09-27 Fri>
+** DONE pay electricity mugalaha
+CLOSED: [2024-09-16 Mon 13:39] DEADLINE: <2024-09-27 Fri>
 
-** TODO pay electricity manyata
-DEADLINE: <2024-09-27 Fri>
+** DONE pay electricity manyata
+CLOSED: [2024-09-16 Mon 13:39] DEADLINE: <2024-09-27 Fri>
 
 ** TODO pay sbi cc bill
 DEADLINE: <2024-09-26 Thu>
@@ -129,7 +129,7 @@ DEADLINE: <2024-12-03 Tue>
 DEADLINE: <2024-12-03 Tue>
 
 ** TODO read about maple tree
-DEADLINE: <2024-09-05 Thu>
+DEADLINE: <2024-09-17 Tue>
 
 ** TODO URGENT: Prep LinuxEndPoint
 DEADLINE: <2024-09-16 Mon>
@@ -137,65 +137,53 @@ DEADLINE: <2024-09-16 Mon>
 ** TODO URGENT: LinuxEndPoint
 DEADLINE: <2024-09-17 Tue>
 ** TODO Do ppc tasks
-DEADLINE: <2024-09-09 Mon>
+DEADLINE: <2024-09-17 Tue>
 
 ** DONE get runqueue threads from debugfs
 CLOSED: [2024-09-10 Tue 23:11] DEADLINE: <2024-09-09 Mon>
 
 ** TODO watch video for scheduler delayed dequeue
-DEADLINE: <2024-09-11 Wed>
+DEADLINE: <2024-09-17 Tue>
 
 ** TODO Talk to Nysal
-DEADLINE: <2024-09-11 Wed>
+DEADLINE: <2024-09-17 Tue>
 
 ** TODO Run sysbench + mysql
-DEADLINE: <2024-09-14 Sat>
+DEADLINE: <2024-09-17 Tue>
 
 ** TODO Run Deathstarbench
-DEADLINE: <2024-09-14 Sat>
+DEADLINE: <2024-09-17 Tue>
 
 ** TODO Setup ppc qemu busybox
-DEADLINE: <2024-09-13 Fri>
+DEADLINE: <2024-09-17 Tue>
 
 ** TODO PPC: Setup ppc qemu busybox
-DEADLINE: <2024-09-13 Fri>
+DEADLINE: <2024-09-17 Tue>
 
 ** TODO PPC: Locking in PPC
-DEADLINE: <2024-09-13 Fri>
+DEADLINE: <2024-09-17 Tue>
 
 ** TODO PPC: Lookup bootup path for linux
-DEADLINE: <2024-09-13 Fri>
+DEADLINE: <2024-09-17 Tue>
 
-** Setup benchmarks
-*** TODO schbench
-DEADLINE: <2024-09-14 Sat>
-*** TODO hackbench
-DEADLINE: <2024-09-14 Sat>
-*** TODO cyclictest
-DEADLINE: <2024-09-14 Sat>
-*** TODO perf
-DEADLINE: <2024-09-14 Sat>
-*** TODO sched
-DEADLINE: <2024-09-14 Sat>
-*** TODO stress-ng
-DEADLINE: <2024-09-14 Sat>
-*** TODO latencytop
-DEADLINE: <2024-09-14 Sat>
-*** TODO lmbench
-DEADLINE: <2024-09-14 Sat>
-*** TODO rt-app
-DEADLINE: <2024-09-14 Sat>
-*** TODO sysbench
-DEADLINE: <2024-09-14 Sat>
-*** TODO fio
-DEADLINE: <2024-09-14 Sat>
-*** TODO pbzip2
-DEADLINE: <2024-09-14 Sat>
-*** TODO stress
-DEADLINE: <2024-09-14 Sat>
-*** TODO dbench
-DEADLINE: <2024-09-14 Sat>
-*** TODO taskset
-DEADLINE: <2024-09-14 Sat>
-*** TODO Deathstar Bench
-DEADLINE: <2024-09-15 Sun>
+** TODO Setup benchmarks
+DEADLINE: <2024-09-17 Tue>
+*** schbench
+*** hackbench
+*** cyclictest
+*** perf
+*** sched
+*** stress-ng
+*** latencytop
+*** lmbench
+*** rt-app
+*** sysbench
+*** fio
+*** pbzip2
+*** stress
+*** dbench
+*** taskset
+*** Deathstar Bench
+** TODO Finish Your work with qemu
+DEADLINE: <2024-10-16 Wed>
+

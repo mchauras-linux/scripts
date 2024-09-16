@@ -26,6 +26,7 @@ function kill_program {
 		else
 			echo -e "Do you want to kill ${RED}$KILL_PROG_NAME${NC} (Y/n): "
 			read RES </dev/tty
+			RES="${RES:-Y}"
 		fi
 	done
 }
