@@ -190,3 +190,9 @@ DEADLINE: <2024-10-16 Wed>
 ** TODO kernel:sched:core.c pick_next_task for_each_cpu_wrap, check if this is correct
 DEADLINE: <2024-09-17 Tue>
 
+** TODO Create an excel sheet for assest and Liabilities
+DEADLINE: <2024-09-21 Sat>
+
+** TODO Create Jenkins Job
+DEADLINE: <2024-09-21 Sat>
+
