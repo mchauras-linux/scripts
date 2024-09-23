@@ -199,3 +199,9 @@ DEADLINE: <2024-09-21 Sat>
 ** TODO Check cyberhaven
 DEADLINE: <2024-09-19 Thu>
 
+** TODO URGENT: Pramod discussion
+DEADLINE: <2024-09-30 Mon>
+
+** TODO URGENT: Pramod discussion pending
+DEADLINE: <2024-10-01 Tue>
+
