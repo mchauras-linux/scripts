@@ -1,0 +1,1847 @@
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:28:30 ─╮
+
+╰─❯
+                                                                                            ─╯
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:28:30 ─╮
+╰─❯ cp ebizzy test1                                                                         ─╯
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:29:26 ─╮
+╰─❯ cp ebizzy fnuky                                                                         ─╯
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:29:38 ─╮
+╰─❯ ./test1 -c -t 1 -S 200 & ./fnuky -c -t 1 -S 200 &                                       ─╯
+[1] 3588
+[2] 3589
+
+╭─   ~/src/ebizzy-0.3                             with root@ltcrain8ok-lp3 at  18:30:20 ─╮
+╰─❯ passwd root                                                                             ─╯
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: password updated successfully
+
+╭─   ~/src/ebizzy-0.3                  took  6s  with root@ltcrain8ok-lp3 at  18:32:46 ─╮
+╰─❯ 52923 records/s                                                                         ─╯
+real 200.00 s
+user 93.76 s
+sys   0.02 s
+
+[2]  + 3589 done       ./fnuky -c -t 1 -S 200
+╭─   ~/src/ebizzy-0.3                  took  6s  with root@ltcrain8ok-lp3 at  18:32:46 ─╮
+╰─❯ 58171 records/s                                                                         ─╯
+real 200.00 s
+user 103.11 s
+sys   0.02 s
+
+[1]  + 3588 done       ./test1 -c -t 1 -S 200
+╭─   ~/src/ebizzy-0.3                    took  6s with root@ltcrain8ok-lp3 at  18:32:46 ─╮
+╰─❯ ip addr show                                                                            ─╯
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: net0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UNKNOWN group default qlen 1
+000
+    link/ether a6:c3:e7:1c:fc:02 brd ff:ff:ff:ff:ff:ff
+    inet 9.40.194.120/24 brd 9.40.194.255 scope global noprefixroute net0
+       valid_lft forever preferred_lft forever
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:34:18 ─╮
+╰─❯ ./test1 -c -t 1 -S 200 & ./fnuky -c -t 1 -S 200 &                                       ─╯
+[1] 3694
+[2] 3695
+
+╭─   ~/src/ebizzy-0.3                             with root@ltcrain8ok-lp3 at  18:35:31 ─╮
+╰─❯ kill -9 3694                                                                            ─╯
+[1]  - 3694 killed     ./test1 -c -t 1 -S 200
+
+╭─   ~/src/ebizzy-0.3                             with root@ltcrain8ok-lp3 at  18:36:55 ─╮
+╰─❯ kill -9 3695                                                                            ─╯
+[2]  + 3695 killed     ./fnuky -c -t 1 -S 200
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:36:58 ─╮
+╰─❯ ./test1 -t 1 -S 200 & ./fnuky  -t 1 -S 200 &                                            ─╯
+[1] 3728
+[2] 3729
+
+╭─   ~/src/ebizzy-0.3                             with root@ltcrain8ok-lp3 at  18:37:12 ─╮
+╰─❯ kill -9 728                                                                             ─╯
+kill: kill 728 failed: no such process
+
+╭─   ~/src/ebizzy-0.3                             with root@ltcrain8ok-lp3 at  18:38:17 ─╮
+╰─❯ kill -9 3728                                                                            ─╯
+[1]  - 3728 killed     ./test1 -t 1 -S 200
+
+╭─   ~/src/ebizzy-0.3                             with root@ltcrain8ok-lp3 at  18:38:20 ─╮
+╰─❯ kill -9 3729                                                                            ─╯
+[2]  + 3729 killed     ./fnuky -t 1 -S 200
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:38:22 ─╮
+╰─❯ ./test1 -t 1 -c & ./fnuky  -t 1 -c  &                                                   ─╯
+[1] 3773
+[2] 3774
+
+╭─   ~/src/ebizzy-0.3                             with root@ltcrain8ok-lp3 at  18:38:39 ─╮
+╰─❯ 58540 records/s                                                                         ─╯
+real 10.00 s
+user  4.30 s
+sys   0.00 s
+
+[1]  - 3773 done       ./test1 -t 1 -c
+╭─   ~/src/ebizzy-0.3                             with root@ltcrain8ok-lp3 at  18:38:39 ─╮
+╰─❯ 67077 records/s                                                                         ─╯
+real 10.00 s
+user  5.52 s
+sys   0.00 s
+
+[2]  + 3774 done       ./fnuky -t 1 -c
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:38:39 ─╮
+╰─❯ perf stat -a ./test1 -t 1 -c & ./fnuky  -t 1 -c  &                                      ─╯
+
+╭─   ~/src/ebizzy-0.3                        ✘ INT with root@ltcrain8ok-lp3 at  18:39:02 ─╮
+╰─❯ vim run_ebizzy_with_perf.sh                                                             ─╯
+
+╭─   ~/src/ebizzy-0.3                   took  59s with root@ltcrain8ok-lp3 at  18:40:07 ─╮
+╰─❯ perf stat -r ./run_ebizzy_with_perf.sh                                                  ─╯
+ Error: switch `r' expects a numerical value
+ Usage: perf stat [<options>] [<command>]
+
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+
+╭─   ~/src/ebizzy-0.3                        ✘ HUP with root@ltcrain8ok-lp3 at  18:40:37 ─╮
+╰─❯ perf stat -r 5 ./run_ebizzy_with_perf.sh                                                ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+49079 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+49084 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+49014 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+49079 records/s
+real 10.00 s
+user 10.00 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+49063 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+48990 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+48968 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+48966 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+49146 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+49099 records/s
+real 10.00 s
+user  9.97 s
+sys   0.02 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+         20,012.46 msec task-clock                       #    1.999 CPUs utilized
+ ( +-  0.00% )
+                67      context-switches                 #    3.348 /sec
+ ( +- 11.17% )
+                42      cpu-migrations                   #    2.099 /sec
+ ( +- 15.60% )
+             1,036      page-faults                      #   51.768 /sec
+ ( +-  0.32% )
+   77,96,15,16,210      cycles                           #    3.896 GHz
+ ( +-  0.00% )
+   85,73,61,89,735      instructions                     #    1.10  insn per cycle
+ ( +-  0.05% )
+    4,24,51,99,996      branches                         #  212.128 M/sec
+ ( +-  0.03% )
+         41,74,361      branch-misses                    #    0.10% of all branches
+ ( +-  2.62% )
+
+          10.00968 +- 0.00119 seconds time elapsed  ( +-  0.01% )
+
+
+╭─   ~/src/ebizzy-0.3
+                                          took  50s with root@ltcrain8ok-lp3 at  18:41:34 ─╮
+╰─❯ perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_wo
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3                   took  50s with root@ltcrain8ok-lp3 at  18:44:05 ─╮
+╰─❯ cat perf_wo                                                                             ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+49019 records/s
+real 10.00 s
+user  9.98 s
+sys   0.01 s
+49106 records/s
+real 10.00 s
+user  9.98 s
+sys   0.01 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+49057 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+49061 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+49169 records/s
+real 10.00 s
+user  9.99 s
+sys   0.01 s
+49154 records/s
+real 10.00 s
+user 10.00 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+49024 records/s
+real 10.00 s
+user  9.97 s
+sys   0.01 s
+49089 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+49080 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+49104 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+         20,012.68 msec task-clock                       #    1.999 CPUs utilized
+ ( +-  0.01% )
+                64      context-switches                 #    3.198 /sec
+ ( +-  4.30% )
+                41      cpu-migrations                   #    2.049 /sec
+ ( +-  5.95% )
+             1,031      page-faults                      #   51.517 /sec
+ ( +-  0.28% )
+   77,96,27,94,856      cycles                           #    3.896 GHz
+ ( +-  0.01% )
+   85,81,42,92,743      instructions                     #    1.10  insn per cycle
+ ( +-  0.05% )
+    4,24,88,79,238      branches                         #  212.309 M/sec
+ ( +-  0.08% )
+         47,61,588      branch-misses                    #    0.11% of all branches
+ ( +-  8.05% )
+
+          10.00968 +- 0.00161 seconds time elapsed  ( +-  0.02% )
+
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:44:15 ─╮
+╰─❯ perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_wo                                     ─╯
+
+╭─   ~/src/ebizzy-0.3                        ✘ INT with root@ltcrain8ok-lp3 at  18:44:22 ─╮
+╰─❯ vim run_ebizzy_with_perf.sh                                                             ─╯
+
+╭─   ~/src/ebizzy-0.3                   took  14s with root@ltcrain8ok-lp3 at  18:44:38 ─╮
+╰─❯ cat perf_wo                                                                             ─╯
+
+╭─   ~/src/ebizzy-0.3                        ✘ INT with root@ltcrain8ok-lp3 at  18:45:01 ─╮
+╰─❯ EBIZZY_C=1 perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_w                           ─╯
+
+╭─   ~/src/ebizzy-0.3                   took  50s with root@ltcrain8ok-lp3 at  18:46:28 ─╮
+╰─❯ cat perf_w                                                                              ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+71722 records/s
+real 10.00 s
+user  4.98 s
+sys   0.00 s
+62217 records/s
+real 10.00 s
+user  4.85 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+78337 records/s
+real 10.00 s
+user  5.45 s
+sys   0.00 s
+62851 records/s
+real 10.00 s
+user  4.37 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+58217 records/s
+real 10.00 s
+user  4.80 s
+sys   0.00 s
+61976 records/s
+real 10.00 s
+user  4.98 s
+sys   0.01 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+57000 records/s
+real 10.00 s
+user  4.97 s
+sys   0.00 s
+58845 records/s
+real 10.00 s
+user  4.84 s
+sys   0.01 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+57237 records/s
+real 10.00 s
+user  4.98 s
+sys   0.00 s
+59467 records/s
+real 10.00 s
+user  4.82 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+          9,827.79 msec task-clock                       #    0.980 CPUs utilized
+ ( +-  0.05% )
+             1,031      context-switches                 #  104.907 /sec
+ ( +-  2.34% )
+                42      cpu-migrations                   #    4.274 /sec
+ ( +-  9.97% )
+             1,004      page-faults                      #  102.159 /sec
+ ( +-  0.50% )
+   38,27,83,55,124      cycles                           #    3.895 GHz
+ ( +-  0.05% )
+ 1,09,72,54,05,096      instructions                     #    2.87  insn per cycle
+ ( +-  4.04% )
+    5,43,23,94,021      branches                         #  552.759 M/sec
+ ( +-  3.94% )
+         52,70,409      branch-misses                    #    0.10% of all branches
+ ( +-  4.05% )
+
+           10.0268 +- 0.0135 seconds time elapsed  ( +-  0.13% )
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:46:37 ─╮
+╰─❯ _cpupower idle-info
+                                                                                            ─╯
+_arguments:comparguments:327: can only be called from completion function
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:46:59 ─╮
+╰─❯ cpupower idle-info
+                                                                                            ─╯
+zsh: command not found: cpupower
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:47:06 ─╮
+╰─❯ dnf whatprovides mpstat
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3
+                                               ✘ INT with root@ltcrain8ok-lp3 at  18:47:12 ─╮
+╰─❯ dnf whatprovides cpupower
+                                                                                            ─╯
+Last metadata expiration check: 0:34:27 ago on Tuesday 01 October 2024 06:13:02 PM.
+kernel-tools-6.8.5-301.fc40.ppc64le : Assortment of tools for the Linux kernel
+Repo        : fedora
+Matched from:
+Filename    : /usr/bin/cpupower
+
+kernel-tools-6.10.11-200.fc40.ppc64le : Assortment of tools for the Linux kernel
+Repo        : updates
+Matched from:
+Filename    : /usr/bin/cpupower
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:47:31 ─╮
+╰─❯ dnf install kernel-tools-6.10.11-200.fc40.ppc64le
+                                                                                            ─╯
+Last metadata expiration check: 0:34:47 ago on Tuesday 01 October 2024 06:13:02 PM.
+Dependencies resolved.
+===============================================================================================
+===============================================================================================
+ Package                                            Architecture                             Ve
+rsion                                           Repository                                Size
+===============================================================================================
+===============================================================================================
+Installing:
+ kernel-tools                                       ppc64le                                  6.
+10.11-200.fc40                                  updates                                  318 k
+Installing dependencies:
+ kernel-tools-libs                                  ppc64le                                  6.
+10.11-200.fc40                                  updates                                  190 k
+
+Transaction Summary
+===============================================================================================
+===============================================================================================
+Install  2 Packages
+
+Total download size: 508 k
+Installed size: 2.4 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/2): kernel-tools-libs-6.10.11-200.fc40.ppc64le.rpm
+                                                               326 kB/s | 190 kB     00:00
+(2/2): kernel-tools-6.10.11-200.fc40.ppc64le.rpm
+                                                               545 kB/s | 318 kB     00:00
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+Total
+                                                               622 kB/s | 508 kB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :
+                                                                                           1/1
+  Installing       : kernel-tools-libs-6.10.11-200.fc40.ppc64le
+                                                                                           1/2
+  Running scriptlet: kernel-tools-libs-6.10.11-200.fc40.ppc64le
+                                                                                           1/2
+  Installing       : kernel-tools-6.10.11-200.fc40.ppc64le
+                                                                                           2/2
+  Running scriptlet: kernel-tools-6.10.11-200.fc40.ppc64le
+                                                                                           2/2
+
+Installed:
+  kernel-tools-6.10.11-200.fc40.ppc64le                                                       k
+ernel-tools-libs-6.10.11-200.fc40.ppc64le
+
+Complete!
+
+╭─   ~/src/ebizzy-0.3
+                                           took  5s with root@ltcrain8ok-lp3 at  18:47:53 ─╮
+╰─❯ cpupower idle-info
+                                                                                            ─╯
+CPUidle driver: pseries_idle
+CPUidle governor: menu
+analyzing CPU 7:
+
+Number of idle states: 2
+Available idle states: snooze CEDE
+snooze:
+Flags/Description: snooze
+Latency: 0
+Usage: 7797
+Duration: 772268
+CEDE:
+Flags/Description: CEDE
+Latency: 12
+Usage: 838349
+Duration: 14956713659
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:47:56 ─╮
+╰─❯ cpupower idle-set -d 1
+                                                                                            ─╯
+Idlestate 1 disabled on CPU 1
+Idlestate 1 disabled on CPU 3
+Idlestate 1 disabled on CPU 5
+Idlestate 1 disabled on CPU 7
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:48:11 ─╮
+╰─❯ cpupower idle-info
+                                                                                            ─╯
+CPUidle driver: pseries_idle
+CPUidle governor: menu
+analyzing CPU 5:
+
+Number of idle states: 2
+Available idle states: snooze CEDE
+snooze:
+Flags/Description: snooze
+Latency: 0
+Usage: 52744
+Duration: 6233533
+CEDE (DISABLED) :
+Flags/Description: CEDE
+Latency: 12
+Usage: 270086
+Duration: 14990293043
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:48:17 ─╮
+╰─❯ perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_wo_1
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3                   took  50s with root@ltcrain8ok-lp3 at  18:49:35 ─╮
+╰─❯ EBIZZY_C=1 perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_w_1                         ─╯
+
+╭─   ~/src/ebizzy-0.3
+                                          took  50s with root@ltcrain8ok-lp3 at  18:50:42 ─╮
+╰─❯ cat perf_w_1
+                                                                                            ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+42983 records/s
+real 10.00 s
+user  5.38 s
+sys   0.00 s
+33937 records/s
+real 10.00 s
+user  4.33 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+38618 records/s
+real 10.00 s
+user  4.84 s
+sys   0.00 s
+38824 records/s
+real 10.00 s
+user  4.90 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+39707 records/s
+real 10.00 s
+user  4.95 s
+sys   0.00 s
+37177 records/s
+real 10.00 s
+user  4.76 s
+sys   0.01 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+45171 records/s
+real 10.00 s
+user  5.62 s
+sys   0.00 s
+32816 records/s
+real 10.00 s
+user  4.13 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+42332 records/s
+real 10.00 s
+user  5.39 s
+sys   0.00 s
+34371 records/s
+real 10.00 s
+user  4.32 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+          9,742.92 msec task-clock                       #    0.971 CPUs utilized
+ ( +-  0.09% )
+               975      context-switches                 #  100.073 /sec
+ ( +-  2.72% )
+                41      cpu-migrations                   #    4.208 /sec
+ ( +-  9.20% )
+               995      page-faults                      #  102.125 /sec
+ ( +-  0.19% )
+   37,94,99,00,694      cycles                           #    3.895 GHz
+ ( +-  0.09% )
+   67,47,51,25,969      instructions                     #    1.78  insn per cycle
+ ( +-  0.30% )
+    3,33,76,08,492      branches                         #  342.568 M/sec
+ ( +-  0.34% )
+         29,97,170      branch-misses                    #    0.09% of all branches
+ ( +-  3.76% )
+
+           10.0336 +- 0.0192 seconds time elapsed  ( +-  0.19% )
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:50:59 ─╮
+╰─❯ cat perf_wo_1
+                                                                                            ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+46209 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+46426 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+46304 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+46470 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+47672 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+47356 records/s
+real 10.00 s
+user 10.00 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+47603 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+47437 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+46929 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+46583 records/s
+real 10.00 s
+user  9.97 s
+sys   0.02 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+         20,014.74 msec task-clock                       #    1.999 CPUs utilized
+ ( +-  0.00% )
+                59      context-switches                 #    2.948 /sec
+ ( +-  9.86% )
+                27      cpu-migrations                   #    1.349 /sec
+ ( +-  5.42% )
+             1,033      page-faults                      #   51.612 /sec
+ ( +-  0.61% )
+   77,97,87,30,078      cycles                           #    3.896 GHz
+ ( +-  0.00% )
+   81,98,61,01,212      instructions                     #    1.05  insn per cycle
+ ( +-  0.56% )
+    4,04,82,12,687      branches                         #  202.262 M/sec
+ ( +-  0.56% )
+         40,42,510      branch-misses                    #    0.10% of all branches
+ ( +-  8.54% )
+
+         10.010722 +- 0.000544 seconds time elapsed  ( +-  0.01% )
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:51:11 ─╮
+╰─❯ cat perf_w_1
+                                                                                            ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+42983 records/s
+real 10.00 s
+user  5.38 s
+sys   0.00 s
+33937 records/s
+real 10.00 s
+user  4.33 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+38618 records/s
+real 10.00 s
+user  4.84 s
+sys   0.00 s
+38824 records/s
+real 10.00 s
+user  4.90 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+39707 records/s
+real 10.00 s
+user  4.95 s
+sys   0.00 s
+37177 records/s
+real 10.00 s
+user  4.76 s
+sys   0.01 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+45171 records/s
+real 10.00 s
+user  5.62 s
+sys   0.00 s
+32816 records/s
+real 10.00 s
+user  4.13 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+42332 records/s
+real 10.00 s
+user  5.39 s
+sys   0.00 s
+34371 records/s
+real 10.00 s
+user  4.32 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+          9,742.92 msec task-clock                       #    0.971 CPUs utilized
+ ( +-  0.09% )
+               975      context-switches                 #  100.073 /sec
+ ( +-  2.72% )
+                41      cpu-migrations                   #    4.208 /sec
+ ( +-  9.20% )
+               995      page-faults                      #  102.125 /sec
+ ( +-  0.19% )
+   37,94,99,00,694      cycles                           #    3.895 GHz
+ ( +-  0.09% )
+   67,47,51,25,969      instructions                     #    1.78  insn per cycle
+ ( +-  0.30% )
+    3,33,76,08,492      branches                         #  342.568 M/sec
+ ( +-  0.34% )
+         29,97,170      branch-misses                    #    0.09% of all branches
+ ( +-  3.76% )
+
+           10.0336 +- 0.0192 seconds time elapsed  ( +-  0.19% )
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:51:34 ─╮
+╰─❯ cat perf_wo_1
+                                                                                            ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+46209 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+46426 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+46304 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+46470 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+47672 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+47356 records/s
+real 10.00 s
+user 10.00 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+47603 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+47437 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+46929 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+46583 records/s
+real 10.00 s
+user  9.97 s
+sys   0.02 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+         20,014.74 msec task-clock                       #    1.999 CPUs utilized
+ ( +-  0.00% )
+                59      context-switches                 #    2.948 /sec
+ ( +-  9.86% )
+                27      cpu-migrations                   #    1.349 /sec
+ ( +-  5.42% )
+             1,033      page-faults                      #   51.612 /sec
+ ( +-  0.61% )
+   77,97,87,30,078      cycles                           #    3.896 GHz
+ ( +-  0.00% )
+   81,98,61,01,212      instructions                     #    1.05  insn per cycle
+ ( +-  0.56% )
+    4,04,82,12,687      branches                         #  202.262 M/sec
+ ( +-  0.56% )
+         40,42,510      branch-misses                    #    0.10% of all branches
+ ( +-  8.54% )
+
+         10.010722 +- 0.000544 seconds time elapsed  ( +-  0.01% )
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:52:11 ─╮
+╰─❯ cat perf_w_1
+                                                                                            ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+42983 records/s
+real 10.00 s
+user  5.38 s
+sys   0.00 s
+33937 records/s
+real 10.00 s
+user  4.33 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+38618 records/s
+real 10.00 s
+user  4.84 s
+sys   0.00 s
+38824 records/s
+real 10.00 s
+user  4.90 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+39707 records/s
+real 10.00 s
+user  4.95 s
+sys   0.00 s
+37177 records/s
+real 10.00 s
+user  4.76 s
+sys   0.01 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+45171 records/s
+real 10.00 s
+user  5.62 s
+sys   0.00 s
+32816 records/s
+real 10.00 s
+user  4.13 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+42332 records/s
+real 10.00 s
+user  5.39 s
+sys   0.00 s
+34371 records/s
+real 10.00 s
+user  4.32 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+          9,742.92 msec task-clock                       #    0.971 CPUs utilized
+ ( +-  0.09% )
+               975      context-switches                 #  100.073 /sec
+ ( +-  2.72% )
+                41      cpu-migrations                   #    4.208 /sec
+ ( +-  9.20% )
+               995      page-faults                      #  102.125 /sec
+ ( +-  0.19% )
+   37,94,99,00,694      cycles                           #    3.895 GHz
+ ( +-  0.09% )
+   67,47,51,25,969      instructions                     #    1.78  insn per cycle
+ ( +-  0.30% )
+    3,33,76,08,492      branches                         #  342.568 M/sec
+ ( +-  0.34% )
+         29,97,170      branch-misses                    #    0.09% of all branches
+ ( +-  3.76% )
+
+           10.0336 +- 0.0192 seconds time elapsed  ( +-  0.19% )
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:52:16 ─╮
+╰─❯ cat perf_wo_1
+                                                                                            ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+46209 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+46426 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+46304 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+46470 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+47672 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+47356 records/s
+real 10.00 s
+user 10.00 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+47603 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+47437 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 1 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 1 > ebizzy_2 &
+Both ebizzy processes have completed.
+46929 records/s
+real 10.00 s
+user  9.99 s
+sys   0.00 s
+46583 records/s
+real 10.00 s
+user  9.97 s
+sys   0.02 s
+cat: 'perfebizzy*': No such file or directory
+rm: cannot remove 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+         20,014.74 msec task-clock                       #    1.999 CPUs utilized
+ ( +-  0.00% )
+                59      context-switches                 #    2.948 /sec
+ ( +-  9.86% )
+                27      cpu-migrations                   #    1.349 /sec
+ ( +-  5.42% )
+             1,033      page-faults                      #   51.612 /sec
+ ( +-  0.61% )
+   77,97,87,30,078      cycles                           #    3.896 GHz
+ ( +-  0.00% )
+   81,98,61,01,212      instructions                     #    1.05  insn per cycle
+ ( +-  0.56% )
+    4,04,82,12,687      branches                         #  202.262 M/sec
+ ( +-  0.56% )
+         40,42,510      branch-misses                    #    0.10% of all branches
+ ( +-  8.54% )
+
+         10.010722 +- 0.000544 seconds time elapsed  ( +-  0.01% )
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:52:24 ─╮
+╰─❯ cpupower idle-set -d 0
+                                                                                            ─╯
+Idlestate 0 disabled on CPU 1
+Idlestate 0 disabled on CPU 3
+Idlestate 0 disabled on CPU 5
+Idlestate 0 disabled on CPU 7
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:53:54 ─╮
+╰─❯ cpupower idle-set -d 0
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3
+                                               ✘ INT with root@ltcrain8ok-lp3 at  18:53:58 ─╮
+╰─❯ cpupower idle-info
+                                                                                            ─╯
+CPUidle driver: pseries_idle
+CPUidle governor: menu
+analyzing CPU 5:
+
+Number of idle states: 2
+Available idle states: snooze CEDE
+snooze (DISABLED) :
+Flags/Description: snooze
+Latency: 0
+Usage: 2653628
+Duration: 318922344
+CEDE (DISABLED) :
+Flags/Description: CEDE
+Latency: 12
+Usage: 270086
+Duration: 14990293043
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:54:02 ─╮
+╰─❯ cpupower idle-set -e 1
+                                                                                            ─╯
+Idlestate 1 enabled on CPU 1
+Idlestate 1 enabled on CPU 3
+Idlestate 1 enabled on CPU 5
+Idlestate 1 enabled on CPU 7
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:54:15 ─╮
+╰─❯ cpupower idle-set -e 0
+                                                                                            ─╯
+Idlestate 0 enabled on CPU 1
+Idlestate 0 enabled on CPU 3
+Idlestate 0 enabled on CPU 5
+Idlestate 0 enabled on CPU 7
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:54:19 ─╮
+╰─❯ cpupower idle-info
+                                                                                            ─╯
+CPUidle driver: pseries_idle
+CPUidle governor: menu
+analyzing CPU 5:
+
+Number of idle states: 2
+Available idle states: snooze CEDE
+snooze:
+Flags/Description: snooze
+Latency: 0
+Usage: 2760750
+Duration: 331801057
+CEDE:
+Flags/Description: CEDE
+Latency: 12
+Usage: 270424
+Duration: 14996026291
+
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:54:21 ─╮
+╰─❯ ppc64_cpu --info
+                                                                                            ─╯
+Core   0:    0     1*    2     3*    4     5*    6     7*
+Core   1:    8     9    10    11    12    13    14    15
+Core   2:   16    17    18    19    20    21    22    23
+Core   3:   24    25    26    27    28    29    30    31
+Core   4:   32    33    34    35    36    37    38    39
+Core   5:   40    41    42    43    44    45    46    47
+Core   6:   48    49    50    51    52    53    54    55
+Core   7:   56    57    58    59    60    61    62    63
+Core   8:   64    65    66    67    68    69    70    71
+Core   9:   72    73    74    75    76    77    78    79
+Core  10:   80    81    82    83    84    85    86    87
+Core  11:   88    89    90    91    92    93    94    95
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:55:21 ─╮
+╰─❯ ppc64_cpu --smt=8
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:55:26 ─╮
+╰─❯ ppc64_cpu --info
+                                                                                            ─╯
+Core   0:    0*    1*    2*    3*    4*    5*    6*    7*
+Core   1:    8     9    10    11    12    13    14    15
+Core   2:   16    17    18    19    20    21    22    23
+Core   3:   24    25    26    27    28    29    30    31
+Core   4:   32    33    34    35    36    37    38    39
+Core   5:   40    41    42    43    44    45    46    47
+Core   6:   48    49    50    51    52    53    54    55
+Core   7:   56    57    58    59    60    61    62    63
+Core   8:   64    65    66    67    68    69    70    71
+Core   9:   72    73    74    75    76    77    78    79
+Core  10:   80    81    82    83    84    85    86    87
+Core  11:   88    89    90    91    92    93    94    95
+
+╭─   ~/src/ebizzy-0.3
+                                                     with root@ltcrain8ok-lp3 at  18:55:28 ─╮
+╰─❯ vim run_ebizzy_with_perf.sh
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3
+                                           took  8s with root@ltcrain8ok-lp3 at  18:55:44 ─╮
+╰─❯ cat perf_wo_1
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3
+                                               ✘ INT with root@ltcrain8ok-lp3 at  18:55:48 ─╮
+╰─❯ perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_wo_1
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3
+                                               ✘ INT with root@ltcrain8ok-lp3 at  18:55:54 ─╮
+╰─❯ vim run_ebizzy_with_perf.sh
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3
+                                           took  8s with root@ltcrain8ok-lp3 at  18:56:05 ─╮
+╰─❯ perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_wo_4
+                                                                                            ─╯
+
+╭─   ~/src/ebizzy-0.3                   took  50s with root@ltcrain8ok-lp3 at  18:57:08 ─╮
+╰─❯ EBIZZY_C=1 perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_w_4                         ─╯
+^C^C^C^C
+
+^Czsh: bad math expression: illegal character: ^[
+                                                                                              ─
+╭─   ~/src/ebizzy-0.3
+
+
+
+
+
+
+
+
+
+               ✘ INT took  34s with root@ltcrain8ok-lp3 at  18:58:17 ─╮
+╰─❯                                                                                           ─
+╯
+#
+
+
+
+
+
+
+
+
+
+
+╭─   ~/src/ebizzy-0.3
+
+
+
+
+
+
+
+
+
+                          ✘ INT with root@ltcrain8ok-lp3 at  18:58:17 ─╮
+╰─❯                                                                                           ─
+╯
+#
+
+
+
+
+
+
+
+
+
+
+╭─   ~/src/ebizzy-0.3
+
+
+
+
+
+
+
+
+
+                          ✘ INT with root@ltcrain8ok-lp3 at  18:58:17 ─╮
+╰─❯                                                                                           ─
+╯
+#
+
+
+
+
+
+
+
+
+
+
+╭─   ~/src/ebizzy-0.3
+
+
+
+
+
+
+
+
+
+                          ✘ INT with root@ltcrain8ok-lp3 at  18:58:17 ─╮
+╰─❯                                                                                           ─
+╯
+#
+
+
+
+
+
+
+
+
+
+
+╭─   ~/src/ebizzy-0.3
+
+
+
+
+
+
+
+
+
+                          ✘ INT with root@ltcrain8ok-lp3 at  18:58:18 ─╮
+╰─❯                                                                                           ─
+╯
+╭─   ~/src/ebizzy-0.3
+
+
+
+
+
+
+
+
+
+                          ✘ INT with root@ltcrain8ok-lp3 at  18:58:18 ─╮
+╭─   ~/src/ebizzy-0.3
+
+
+
+
+
+
+
+
+
+                          ✘ INT with root@ltcrain8ok-lp3 at  18:58:18 ─╮
+╭─   ~/src/ebizzy-0.3                        ✘ INT with root@ltcrain8ok-lp3 at  18:58:18 ─╮
+╰─❯ ./test1 -t 1 -c & ./fnuky  -t 4 -c  &                                                   ─╯
+
+╭─   ~/src/ebizzy-0.3                        ✘ INT with root@ltcrain8ok-lp3 at  18:58:43 ─╮
+╰─❯ vim run_ebizzy_with_perf.sh                                                             ─╯
+
+╭─   ~/src/ebizzy-0.3                   took  20s with root@ltcrain8ok-lp3 at  18:59:05 ─╮
+╰─❯ cp ebizzy ebizzy1                                                                       ─╯
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:59:10 ─╮
+╰─❯ cp ebizzy ebizzy2                                                                       ─╯
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  18:59:12 ─╮
+╰─❯ EBIZZY_C=1 perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_w_4                         ─╯
+
+╭─   ~/src/ebizzy-0.3                   took  50s with root@ltcrain8ok-lp3 at  19:00:06 ─╮
+╰─❯ cat perf_w_4                                                                            ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+129722 records/s
+real 10.00 s
+user 39.92 s
+sys   0.00 s
+125351 records/s
+real 10.00 s
+user 39.99 s
+sys   0.00 s
+128530 records/s
+real 10.00 s
+user 39.50 s
+sys   0.00 s
+127641 records/s
+real 10.00 s
+user 39.14 s
+sys   0.03 s
+cat: 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+129722 records/s
+real 10.00 s
+user 39.92 s
+sys   0.00 s
+129422 records/s
+real 10.00 s
+user 39.97 s
+sys   0.00 s
+128530 records/s
+real 10.00 s
+user 39.50 s
+sys   0.00 s
+128321 records/s
+real 10.00 s
+user 39.19 s
+sys   0.01 s
+cat: 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+129722 records/s
+real 10.00 s
+user 39.92 s
+sys   0.00 s
+130887 records/s
+real 10.00 s
+user 39.97 s
+sys   0.00 s
+128530 records/s
+real 10.00 s
+user 39.50 s
+sys   0.00 s
+128066 records/s
+real 10.00 s
+user 39.16 s
+sys   0.04 s
+cat: 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+129722 records/s
+real 10.00 s
+user 39.92 s
+sys   0.00 s
+131849 records/s
+real 10.00 s
+user 39.97 s
+sys   0.00 s
+128530 records/s
+real 10.00 s
+user 39.50 s
+sys   0.00 s
+124558 records/s
+real 10.00 s
+user 39.27 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy -c -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy -c -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+129722 records/s
+real 10.00 s
+user 39.92 s
+sys   0.00 s
+131991 records/s
+real 10.00 s
+user 39.96 s
+sys   0.00 s
+128530 records/s
+real 10.00 s
+user 39.50 s
+sys   0.00 s
+126823 records/s
+real 10.00 s
+user 39.02 s
+sys   0.05 s
+cat: 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+         79,211.91 msec task-clock                       #    7.904 CPUs utilized
+ ( +-  0.04% )
+             2,807      context-switches                 #   35.437 /sec
+ ( +-  8.92% )
+                 4      cpu-migrations                   #    0.050 /sec
+ ( +- 12.75% )
+             1,038      page-faults                      #   13.104 /sec
+ ( +-  1.32% )
+ 3,08,58,64,61,527      cycles                           #    3.896 GHz
+ ( +-  0.04% )
+ 2,24,56,89,14,423      instructions                     #    0.73  insn per cycle
+ ( +-  0.43% )
+   11,11,47,41,048      branches                         #  140.317 M/sec
+ ( +-  0.43% )
+         85,04,631      branch-misses                    #    0.08% of all branches
+ ( +-  0.31% )
+
+           10.0216 +- 0.0127 seconds time elapsed  ( +-  0.13% )
+
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  19:00:14 ─╮
+╰─❯ cat perf_wo_4                                                                           ─╯
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+64603 records/s
+real 10.00 s
+user 38.92 s
+sys   0.07 s
+66115 records/s
+real 10.00 s
+user 39.95 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+112227 records/s
+real 10.00 s
+user 39.38 s
+sys   0.00 s
+114885 records/s
+real 10.00 s
+user 40.00 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+130408 records/s
+real 10.00 s
+user 39.60 s
+sys   0.01 s
+129568 records/s
+real 10.00 s
+user 39.81 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+130474 records/s
+real 10.00 s
+user 39.96 s
+sys   0.00 s
+128922 records/s
+real 10.00 s
+user 39.50 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+Usage: ./run_ebizzy_with_perf.sh <perf_command> <perf_args...>
+ -o perfebizzy1 ./ebizzy  -t 4 > ebizzy_1 &
+ -o perfebizzy2 ./ebizzy  -t 4 > ebizzy_2 &
+Both ebizzy processes have completed.
+129722 records/s
+real 10.00 s
+user 39.92 s
+sys   0.00 s
+128530 records/s
+real 10.00 s
+user 39.50 s
+sys   0.00 s
+cat: 'perfebizzy*': No such file or directory
+
+ Performance counter stats for './run_ebizzy_with_perf.sh' (5 runs):
+
+         79,379.37 msec task-clock                       #    7.927 CPUs utilized
+ ( +-  0.11% )
+             1,050      context-switches                 #   13.228 /sec
+ ( +-  5.76% )
+                17      cpu-migrations                   #    0.214 /sec
+ ( +- 17.55% )
+             1,049      page-faults                      #   13.215 /sec
+ ( +-  1.78% )
+ 2,71,27,40,97,101      cycles                           #    3.417 GHz
+ ( +- 10.83% )
+ 1,98,44,00,64,835      instructions                     #    0.73  insn per cycle
+ ( +- 10.95% )
+    9,82,01,18,088      branches                         #  123.711 M/sec
+ ( +- 10.93% )
+         75,24,464      branch-misses                    #    0.08% of all branches
+ ( +- 10.46% )
+
+          10.01407 +- 0.00285 seconds time elapsed  ( +-  0.03% )
+
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  19:00:28 ─╮
+╰─❯ ppc64_cpu --smt=off                                                                     ─╯
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  19:03:26 ─╮
+╰─❯ perf stat -r 5 ./run_ebizzy_with_perf.sh &> perf_wo_4                                   ─╯
+
+╭─   ~/src/ebizzy-0.3                        ✘ INT with root@ltcrain8ok-lp3 at  19:03:45 ─╮
+╰─❯ perf stat -r 5 ./ebizzy -t 4                                                            ─╯
+128418 records/s
+real 10.00 s
+user  9.79 s
+sys   0.02 s
+
+116539 records/s
+real 10.00 s
+user  9.85 s
+sys   0.00 s
+^C./ebizzy: Interrupt
+^C./ebizzy: Interrupt
+^C./ebizzy: Interrupt
+
+ Performance counter stats for './ebizzy -t 4' (5 runs):
+
+          4,833.09 msec task-clock                       #    0.980 CPUs utilized
+ ( +- 42.74% )
+               631      context-switches                 #  130.558 /sec
+ ( +- 39.00% )
+                 0      cpu-migrations                   #    0.000 /sec
+               221      page-faults                      #   45.726 /sec
+ ( +- 10.10% )
+   18,82,76,16,663      cycles                           #    3.896 GHz
+ ( +- 42.74% )
+   53,05,88,93,038      instructions                     #    2.82  insn per cycle
+ ( +- 42.11% )
+    2,63,30,57,057      branches                         #  544.798 M/sec
+ ( +- 41.95% )
+         24,81,910      branch-misses                    #    0.09% of all branches
+ ( +- 42.04% )
+
+              4.93 +- 2.10 seconds time elapsed  ( +- 42.66% )
+
+
+╭─   ~/src/ebizzy-0.3                   took  25s with root@ltcrain8ok-lp3 at  19:04:32 ─╮
+╰─❯ ppc64_cpu --smt=2                                                                       ─╯
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  19:04:42 ─╮
+╰─❯ perf stat -r 5 ./ebizzy -t 4                                                            ─╯
+217972 records/s
+real 10.00 s
+user 19.80 s
+sys   0.01 s
+249074 records/s
+real 10.00 s
+user 19.84 s
+sys   0.00 s
+259166 records/s
+real 10.00 s
+user 19.82 s
+sys   0.00 s
+247902 records/s
+real 10.00 s
+user 19.82 s
+sys   0.00 s
+263166 records/s
+real 10.00 s
+user 19.82 s
+sys   0.00 s
+
+ Performance counter stats for './ebizzy -t 4' (5 runs):
+
+         19,830.14 msec task-clock                       #    1.981 CPUs utilized
+ ( +-  0.02% )
+             2,199      context-switches                 #  110.892 /sec
+ ( +-  1.28% )
+                10      cpu-migrations                   #    0.504 /sec
+ ( +- 20.88% )
+               318      page-faults                      #   16.036 /sec
+ ( +-  2.44% )
+   77,25,37,30,715      cycles                           #    3.896 GHz
+ ( +-  0.02% )
+ 2,16,13,64,76,815      instructions                     #    2.80  insn per cycle
+ ( +-  3.20% )
+   10,69,17,76,541      branches                         #  539.168 M/sec
+ ( +-  3.24% )
+         99,58,576      branch-misses                    #    0.09% of all branches
+ ( +-  3.38% )
+
+         10.009725 +- 0.000145 seconds time elapsed  ( +-  0.00% )
+
+
+╭─   ~/src/ebizzy-0.3                   took  50s with root@ltcrain8ok-lp3 at  19:05:45 ─╮
+╰─❯ perf stat -r 5 ./ebizzy -c -t 4 > core_sched                                            ─╯
+^C./ebizzy: Interrupt
+
+ Performance counter stats for './ebizzy -c -t 4' (5 runs):
+
+         17,599.92 msec task-clock                       #    1.981 CPUs utilized
+ ( +- 12.68% )
+             1,933      context-switches                 #  109.830 /sec
+ ( +- 12.54% )
+                 9      cpu-migrations                   #    0.511 /sec
+ ( +- 25.72% )
+               317      page-faults                      #   18.011 /sec
+ ( +-  1.83% )
+   68,56,53,76,662      cycles                           #    3.896 GHz
+ ( +- 12.68% )
+ 1,97,07,82,33,467      instructions                     #    2.87  insn per cycle
+ ( +- 13.02% )
+    9,75,70,66,152      branches                         #  554.381 M/sec
+ ( +- 13.06% )
+         91,01,056      branch-misses                    #    0.09% of all branches
+ ( +- 13.84% )
+
+              8.89 +- 1.13 seconds time elapsed  ( +- 12.69% )
+
+
+╭─   ~/src/ebizzy-0.3                   took  44s with root@ltcrain8ok-lp3 at  19:07:16 ─╮
+╰─❯ ppc64_cpu --smt=8                                                                       ─╯
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  19:07:27 ─╮
+╰─❯ perf stat -r 5 ./ebizzy -c -t 4 &> core_sched                                           ─╯
+
+╭─   ~/src/ebizzy-0.3                   took  50s with root@ltcrain8ok-lp3 at  19:08:27 ─╮
+╰─❯ cat core_sched                                                                          ─╯
+231421 records/s
+real 10.00 s
+user 39.54 s
+sys   0.02 s
+223908 records/s
+real 10.00 s
+user 39.62 s
+sys   0.00 s
+224663 records/s
+real 10.00 s
+user 39.57 s
+sys   0.01 s
+224796 records/s
+real 10.00 s
+user 39.56 s
+sys   0.00 s
+224367 records/s
+real 10.00 s
+user 39.58 s
+sys   0.00 s
+
+ Performance counter stats for './ebizzy -c -t 4' (5 runs):
+
+         39,605.56 msec task-clock                       #    3.953 CPUs utilized
+ ( +-  0.03% )
+             1,383      context-switches                 #   34.919 /sec
+ ( +-  4.26% )
+                41      cpu-migrations                   #    1.035 /sec
+ ( +- 11.26% )
+               293      page-faults                      #    7.398 /sec
+ ( +-  2.05% )
+ 1,54,28,32,25,488      cycles                           #    3.895 GHz
+ ( +-  0.03% )
+ 1,97,26,63,42,725      instructions                     #    1.28  insn per cycle
+ ( +-  0.62% )
+    9,76,28,50,048      branches                         #  246.502 M/sec
+ ( +-  0.62% )
+         99,69,946      branch-misses                    #    0.10% of all branches
+ ( +-  8.41% )
+
+           10.0193 +- 0.0159 seconds time elapsed  ( +-  0.16% )
+
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  19:08:34 ─╮
+╰─❯ ppc64_cpu --info                                                                        ─╯
+Core   0:    0*    1*    2*    3*    4*    5*    6*    7*
+Core   1:    8     9    10    11    12    13    14    15
+Core   2:   16    17    18    19    20    21    22    23
+Core   3:   24    25    26    27    28    29    30    31
+Core   4:   32    33    34    35    36    37    38    39
+Core   5:   40    41    42    43    44    45    46    47
+Core   6:   48    49    50    51    52    53    54    55
+Core   7:   56    57    58    59    60    61    62    63
+Core   8:   64    65    66    67    68    69    70    71
+Core   9:   72    73    74    75    76    77    78    79
+Core  10:   80    81    82    83    84    85    86    87
+Core  11:   88    89    90    91    92    93    94    95
+
+╭─   ~/src/ebizzy-0.3                              with root@ltcrain8ok-lp3 at  03:26:47 ─╮
+╰─❯                                                                                         ─╯
