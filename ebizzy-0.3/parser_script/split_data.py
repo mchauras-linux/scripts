@@ -39,7 +39,7 @@ def parse_performance_section(section):
         'LLC-load-misses': None,
         'LLC-store-misses': None,
         'Cache-misses': None,
-        'PM_exec_stall (G/sec)': None
+        'PM_exec_stall': None
     }
     
     # Regex patterns to extract relevant metrics
@@ -54,7 +54,7 @@ def parse_performance_section(section):
 #        'LLC-store-misses': r'(\d[\d,]*)\s+LLC-store-misses\s+#\s+([\d.]+)\s+(?:K|M)?/sec',
         'LLC-store-misses': r'LLC-store-misses\s+#\s*(.*?/sec)',
         'Cache-misses': r'(\d[\d,]*)\s+cache-misses\s+#\s+(\d+\.\d+)% of all cache refs',
-        'PM_exec_stall (G/sec)': r'(\d[\d,]*)\s+pm_exec_stall\s+#\s+([\d.]+) G/sec',
+        'PM_exec_stall': r'pm_exec_stall\s+#\s*(.*?/sec)',
     }
     
     for metric, pattern in patterns.items():
@@ -79,7 +79,7 @@ def get_md_table(data):
     metrics.remove('SMT')  # Remove 'SMT' from metrics since it's already included as headers
 
     # Create the header row
-    headers = '| SMT | ' + ' | '.join(smt_values) + ' |'
+    headers = '| Metrics | ' + ' | '.join(smt_values) + ' |'
     # Create the separator row
     separator = '| --- | ' + ' | '.join(['---'] * len(smt_values)) + ' |'
 
