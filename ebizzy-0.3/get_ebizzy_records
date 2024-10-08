@@ -1,0 +1,84 @@
+#! /usr/bin/python3
+
+import os
+import sys
+import glob
+import psutil
+import statistics
+
+def remove_outliers(data):
+    # Calculate the mean and standard deviation
+    mean = statistics.mean(data)
+    std_dev = statistics.stdev(data)
+
+    # Determine the lower and upper bounds
+    lower_bound = mean - std_dev
+    upper_bound = mean + std_dev
+    # Filter the data to remove outliers
+    filtered_data = [x for x in data if lower_bound <= x <= upper_bound]
+
+    return filtered_data
+
+def get_ebizzy_records(directory, file_pattern="ebizzy_*"):
+        # Create the full pattern to match files
+    pattern = os.path.join(directory, file_pattern)
+
+    # Use glob to find files that match the pattern
+    ebizzy_files = glob.glob(pattern)
+
+    files_rec = []
+
+    for file in ebizzy_files:
+        total_records = []
+        try:
+            # Read the content of each ebizzy output file
+            with open(file, 'r') as f:
+                content = f.read()
+                # Look for a line containing records/s (e.g., "XXXXX records/s")
+                for line in content.splitlines():
+                    if "records/s" in line:
+                        # Extract the number of records from the line
+                        records = int(line.split()[0])
+                        #print(f"File: {file}, Records/s: {records:,.2f}")
+                        total_records.append(records)
+
+        except Exception as e:
+            print(f"Error reading file {file}: {e}")
+        
+        if len(total_records) > 0:
+            total_records = remove_outliers(total_records)
+            average_records = sum(total_records) / len(total_records)
+            files_rec.append(average_records)
+
+    # Calculate and print the average
+    if len(files_rec) > 0:
+        total_records = sum(files_rec)
+        # Get the number of logical cores (including SMT)
+        logical_cores = psutil.cpu_count(logical=True)
+        
+        # Get the number of physical cores (excluding SMT)
+        physical_cores = psutil.cpu_count(logical=False)
+        
+        print(f"Cores: {physical_cores}")
+        print(f"CPUS: {logical_cores}")
+        # Determine if SMT is enabled
+        if logical_cores > physical_cores:
+            smt_ratio = logical_cores // physical_cores
+            print(f"SMT-{smt_ratio}")
+        else:
+            print("SMT is not enabled.")
+        print(f"Total records/s: {total_records:,.2f}\n")
+    else:
+        print("\nNo valid records found.\n")
+
+if __name__ == "__main__":
+    # Check if a directory argument is provided
+    if len(sys.argv) < 2:
+        print("Usage: python script_name.py <directory_path>")
+        sys.exit(1)
+
+    # Get the directory from command line argument
+    directory_path = sys.argv[1]
+
+    # Get matched files
+    get_ebizzy_records(directory_path)
