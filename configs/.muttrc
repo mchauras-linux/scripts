@@ -15,9 +15,11 @@ mailboxes -label sched $HOME/.mails/sched
 #mailboxes -label todos $HOME/mail/todos
 
 # Others #
-set sort = threads
+set use_threads=yes
+set sort=reverse-last-date
+#set sort_browser=reverse-date
+#set sort_aux=reverse-last-date-received
 unignore Message-Id:
-set sort_aux=reverse-date-received
 
 # Caching #
 set header_cache="$HOME/.mutt/cache/header"
@@ -39,9 +41,17 @@ bind pager \CP sidebar-prev
 bind pager \CN sidebar-next
 bind pager \CO sidebar-open
 
+#scroll inside the message rather than the index
+bind pager <up> previous-line
+bind pager <down> next-line
+
 #Toggle the visibility of the Sidebar.
 bind index,pager B sidebar-toggle-visible
 
 ######
+#set header_cache = "/home//Mail/amac"
+#set message_cachedir = "/home/amachhiw/Mail/amac"
+set new_mail_command="notify-send -i '/home/mchauras/.neomutt.png' \
+'New Email in %f' '%n new messages, %u unread.' &"
 
 source ~/.muttrc.cred 
