@@ -1,0 +1,45 @@
+; to refresh with new results, run: lei up /home/mchauras/.mails/linuxppc
+; `maxuid' and `lastresult' lines are maintained by "lei up" for optimization
+[lei]
+	q = (a:linuxppc-dev@lists.ozlabs.org) AND rt:9.month.ago..
+[lei "q"]
+	include = https://lore.kernel.org/all/
+	external = 1
+	local = 1
+	remote = 1
+	dedupe = mid
+	output = maildir:/home/mchauras/.mails/linuxppc
+
+
+; to refresh with new results, run: lei up /home/mchauras/.mails/linux-riscv
+; `maxuid' and `lastresult' lines are maintained by "lei up" for optimization
+[lei]
+	q = (a:linux-riscv@lists.infradead.org) AND rt:9.month.ago..
+[lei "q"]
+	include = https://lore.kernel.org/all/
+	external = 1
+	local = 1
+	remote = 1
+	dedupe = mid
+	output = maildir:/home/mchauras/.mails/linux-riscv
+[external "/home/mchauras/.local/share/lei/store"]
+	maxuid = 78336
+
+
+; to refresh with new results, run: lei up /home/mchauras/.mails/sched
+; `maxuid' and `lastresult' lines are maintained by "lei up" for optimization
+[lei]
+	q = (dfn:Documentation/features/sched/* OR dfn:Documentation/scheduler/* OR dfn:include/linux/sched/* OR dfn:include/uapi/linux/sched/* OR dfn:kernel/sched/* OR dfn:tools/include/linux/sched/* OR dfn:tools/testing/selftests/sched/*) AND rt:9.month.ago..
+[lei "q"]
+	include = https://lore.kernel.org/all/
+	external = 1
+	local = 1
+	remote = 1
+	dedupe = mid
+	output = maildir:/home/mchauras/.mails/sched
+[external "/home/mchauras/.local/share/lei/store"]
+	maxuid = 75952
+[external "https://lore.kernel.org/all/"]
+	lastresult = 1730472482
+
+
