@@ -6,10 +6,12 @@ source ~/.mutt/dracula.muttrc
 set folder = "~/.mails"
 
 # Other mailboxes #
+mailboxes -label mchauras $HOME/.mails/mchauras
 mailboxes -label sched $HOME/.mails/sched
 mailboxes -label linuxppc $HOME/.mails/linuxppc
 mailboxes -label linux-riscv $HOME/.mails/linux-riscv
-mailboxes -label mchauras $HOME/.mails/mchauras
+mailboxes -label memory-management $HOME/.mails/mm
+mailboxes -label grub-devel $HOME/.mails/grub-devel
 #mailboxes -label ltc-people $HOME/.mails/ltc-people
 #mailboxes -label fsdevel $HOME/workspace/projects/lei/fsdevel
 #mailboxes -label ojaswin $HOME/workspace/projects/lei/ojaswin
@@ -59,4 +61,4 @@ bind index,pager B sidebar-toggle-visible
 set new_mail_command="notify-send -i '/home/mchauras/.neomutt.png' \
 'New Email in %f' '%n new messages, %u unread.' &"
 
-source ~/.muttrc.cred 
+#source ~/.muttrc.cred 
