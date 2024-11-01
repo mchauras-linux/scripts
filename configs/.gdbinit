@@ -2387,6 +2387,8 @@ define init-qemu
     focus cmd
 end
 
+add-auto-load-safe-path /
+
 # vim: filetype=python
 # Local Variables:
 # mode: python
