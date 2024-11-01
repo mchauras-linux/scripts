@@ -7,6 +7,9 @@ set folder = "~/.mails"
 
 # Other mailboxes #
 mailboxes -label sched $HOME/.mails/sched
+mailboxes -label linuxppc $HOME/.mails/linuxppc
+mailboxes -label linux-riscv $HOME/.mails/linux-riscv
+mailboxes -label mchauras $HOME/.mails/mchauras
 #mailboxes -label ltc-people $HOME/.mails/ltc-people
 #mailboxes -label fsdevel $HOME/workspace/projects/lei/fsdevel
 #mailboxes -label ojaswin $HOME/workspace/projects/lei/ojaswin
@@ -44,13 +47,15 @@ bind pager \CO sidebar-open
 #scroll inside the message rather than the index
 bind pager <up> previous-line
 bind pager <down> next-line
+bind pager k previous-line
+bind pager j next-line
+bind pager h previous-entry
+bind pager l next-entry
 
 #Toggle the visibility of the Sidebar.
 bind index,pager B sidebar-toggle-visible
 
 ######
-#set header_cache = "/home//Mail/amac"
-#set message_cachedir = "/home/amachhiw/Mail/amac"
 set new_mail_command="notify-send -i '/home/mchauras/.neomutt.png' \
 'New Email in %f' '%n new messages, %u unread.' &"
 
