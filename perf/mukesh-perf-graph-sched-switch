@@ -1,0 +1,45 @@
+#! /usr/bin/python3
+
+import matplotlib.pyplot as plt
+import re
+import argparse
+
+# Set up argument parser to get filename from command line
+parser = argparse.ArgumentParser(description="Plot CPU activity over time by PID.")
+parser.add_argument("filename", type=str, help="Path to the log file.")
+parser.add_argument("--output", type=str, default="cpu_activity", help="Output image filename.")
+args = parser.parse_args()
+
+# Parse data from the log file
+data = []
+with open(args.filename) as f:
+    for line in f:
+        # Match sched_switch lines with pid and CPU info
+        match = re.search(r"\[(\d+)\].(\d+\.\d+):\s+sched:sched_switch:\s.*==>\s.*:(\d+)", line)
+        if match:
+            cpu = int(match.group(1))
+            time = float(match.group(2))
+            pid = int(match.group(3))
+            if pid != 0:
+                data.append((time, pid, cpu))
+
+# Organize data by PID
+pid_data = {}
+for time, pid, cpu in data:
+    if pid not in pid_data:
+        pid_data[pid] = {'time': [], 'cpu': []}
+    pid_data[pid]['time'].append(time)
+    pid_data[pid]['cpu'].append(cpu)
+
+# Plot data
+plt.figure(figsize=(80, 8))
+for pid, info in pid_data.items():
+    plt.plot(info['time'], info['cpu'], marker='o', label=f"PID {pid}")
+
+plt.xlabel("Time (s)")
+plt.ylabel("CPU Number")
+plt.title("CPU Activity Over Time by PID")
+plt.legend()
+plt.savefig(args.output + ".jpg", format='jpg')
+plt.show()
+
