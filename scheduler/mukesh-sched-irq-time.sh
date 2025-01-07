@@ -9,6 +9,9 @@ jiffies_to_ns() {
   echo $((jiffies * 1000000000 / HZ))
 }
 
+# Define the ordered list of IRQ types
+ORDERED_IRQ_TYPES=("total" "hi" "timer" "net_tx" "net_rx" "block" "irq_poll" "tasklet" "sched" "hrtimer" "rcu")
+
 # Map soft IRQ names to their corresponding fields
 declare -A IRQ_TYPES=(
   ["total"]=2
@@ -24,6 +27,26 @@ declare -A IRQ_TYPES=(
   ["rcu"]=12
 )
 
+# Function to display help message
+display_help() {
+  echo "Usage: $0 [OPTION]"
+  echo "Display the time spent in IRQs (in nanoseconds) from /proc/stat."
+  echo
+  echo "Options:"
+  echo "  --help          Display this help message."
+  for irq in "${ORDERED_IRQ_TYPES[@]}"; do
+    echo "  $irq            Show time spent in $irq IRQs."
+  done
+  echo
+  echo "If no option is given, all values are displayed in sequence."
+  exit 0
+}
+
+# Check for the --help parameter
+if [[ $1 == "--help" ]]; then
+  display_help
+fi
+
 # Parse /proc/stat to get soft IRQ data
 read -r total_irq hi timer net_tx net_rx block irq_poll tasklet sched hrtimer rcu < <(awk '/^softirq/ {for (i=2; i<=NF; i++) printf "%s ", $i}' /proc/stat)
 
@@ -38,16 +61,16 @@ if [[ -n $1 ]]; then
     value_ns=$(jiffies_to_ns "${SOFTIRQ_VALUES[$field_index]}")
     echo "${param^} IRQ time (ns): $value_ns"
   else
-    echo "Invalid parameter. Valid options are: ${!IRQ_TYPES[*]}"
+    echo "Invalid parameter. Use --help for valid options."
     exit 1
   fi
 else
-  # Print all values by default
-  echo "IRQ Times (in nanoseconds):"
-  for irq in "${!IRQ_TYPES[@]}"; do
+  # Print all values in a defined sequence
+  # echo "IRQ Times (in nanoseconds):"
+  for irq in "${ORDERED_IRQ_TYPES[@]}"; do
     field_index=$((IRQ_TYPES[$irq] - 2))
     value_ns=$(jiffies_to_ns "${SOFTIRQ_VALUES[$field_index]}")
-    printf "%-10s: %s\n" "${irq^}" "$value_ns"
+    printf "%-10s: %s ns\n" "${irq^}" "$value_ns"
   done
 fi
 
