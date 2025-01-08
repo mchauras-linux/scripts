@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/scripts:/$HOME/mukesh_tools/:$HOME/qemu/build:/home/linuxbrew/.linuxbrew/bin:$HOME/scripts/scheduler:$HOME/scripts/perf:$HOME/scripts/mm:$HOME/scripts/agenda
+export PATH=$PATH:$HOME/scripts:/$HOME/mukesh_tools/:$HOME/qemu/build:/home/linuxbrew/.linuxbrew/bin:$HOME/scripts/scheduler:$HOME/scripts/perf:$HOME/scripts/mm:$HOME/scripts/agenda:$HOME/scripts/linux-build
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
