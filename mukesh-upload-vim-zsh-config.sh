@@ -26,7 +26,7 @@ if [ -f ~/.mukesh_configured ]; then
 	if [[ $(git status --porcelain) ]]; then
 		git checkout -b $BRANCH
 
-		git add \
+		git add configs/lei-queries.txt \
 			configs/.vimrc \
 			configs/.bashrc \
 			configs/.bash_prompt \
