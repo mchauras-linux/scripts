@@ -1,7 +1,7 @@
 #! /bin/bash
 
 export ARCH=powerpc
-export CROSS_COMPILE=powerpc-linux-gnu-
+export CROSS_COMPILE=powerpc64le-linux-gnu-
 
 make pseries_defconfig
 

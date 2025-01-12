@@ -46,6 +46,11 @@ if [ -f ~/.mukesh_configured ]; then
 
 		git add mukesh-*
 		git add docs
+		git add scheduler
+	        git add perf
+		git add bpf-scripts
+		git add linux-build
+		git add misc-scripts	
 
 		git status
 
