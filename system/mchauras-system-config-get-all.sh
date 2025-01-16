@@ -45,7 +45,7 @@ else
 		~/scripts
 fi
 
-~/scripts/mukesh-download-system-config.sh
+~/scripts/system/mchauras-system-download-config.sh
 
 #chsh -s `which zsh`
 if [ $EUID -eq 0 ] 
