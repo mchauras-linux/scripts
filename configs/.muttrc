@@ -13,6 +13,7 @@ mailboxes -label linux-riscv $HOME/.mails/linux-riscv
 mailboxes -label memory-management $HOME/.mails/mm
 mailboxes -label grub-devel $HOME/.mails/grub-devel
 mailboxes -label ltc-people $HOME/.mails/ltc-people
+mailboxes -label todo $HOME/.mails/todo
 #mailboxes -label fsdevel $HOME/workspace/projects/lei/fsdevel
 #mailboxes -label ojaswin $HOME/workspace/projects/lei/ojaswin
 #mailboxes -label ltc-mmfs $HOME/workspace/projects/lei/ltc-mmfs
@@ -56,6 +57,7 @@ bind pager l next-entry
 
 #Toggle the visibility of the Sidebar.
 bind index,pager B sidebar-toggle-visible
+macro index,pager M "<tag-thread>;C +todo<enter>" "Copy entire thread to todo mailbox"
 
 # Number of index lines to keep visible while reading a message
 # set pager_index_lines=3

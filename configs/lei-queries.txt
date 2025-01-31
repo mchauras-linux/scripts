@@ -11,7 +11,7 @@
 	dedupe = mid
 	output = maildir:/home/mchauras/.mails/grub-devel
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1736779460
+	lastresult = 1737891360
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123443
 
@@ -31,7 +31,7 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123649
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1736767322
+	lastresult = 1738261743
 
 
 ; to refresh with new results, run: lei up /home/mchauras/.mails/linux-riscv
@@ -49,7 +49,7 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123648
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1736779461
+	lastresult = 1738261740
 
 
 ; to refresh with new results, run: lei up /home/mchauras/.mails/ltc-people
@@ -67,7 +67,7 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 121630
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1736485027
+	lastresult = 1738261746
 
 
 ; to refresh with new results, run: lei up /home/mchauras/.mails/mchauras
@@ -83,7 +83,7 @@
 	dedupe = mid
 	output = maildir:/home/mchauras/.mails/mchauras
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1734232873
+	lastresult = 1737611520
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 114870
 
@@ -103,7 +103,7 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123645
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1736767334
+	lastresult = 1738261747
 
 
 ; to refresh with new results, run: lei up /home/mchauras/.mails/sched
@@ -121,6 +121,6 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123542
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1736767337
+	lastresult = 1738261751
 
 
