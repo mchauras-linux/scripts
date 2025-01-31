@@ -60,5 +60,13 @@ copy-to-clipboard() {
 
 addtask() {
 	args="${@:2}"
-	~/scripts/agenda/mukesh-add-task.sh $1 "$args"
+	~/scripts/agenda/mchauras-add-task.sh $1 "$args"
+}
+
+gdb-tmux() {
+    local id="$(tmux split-pane -hPF "#D" "tail -f /dev/null")"
+    tmux last-pane
+    local tty="$(tmux display-message -p -t "$id" '#{pane_tty}')"
+    gdb -ex "dashboard -output $tty" "$@"
+    tmux kill-pane -t "$id"
 }
