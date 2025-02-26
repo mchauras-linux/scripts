@@ -12,6 +12,7 @@
 	output = maildir:/home/mchauras/.mails/grub-devel
 [external "https://lore.kernel.org/all/"]
 	lastresult = 1740594540
+
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123443
 
@@ -34,6 +35,7 @@
 	lastresult = 1740594548
 
 
+
 ; to refresh with new results, run: lei up /home/mchauras/.mails/linux-riscv
 ; `maxuid' and `lastresult' lines are maintained by "lei up" for optimization
 [lei]
@@ -50,6 +52,7 @@
 	maxuid = 123648
 [external "https://lore.kernel.org/all/"]
 	lastresult = 1740594542
+
 
 
 ; to refresh with new results, run: lei up /home/mchauras/.mails/ltc-people
