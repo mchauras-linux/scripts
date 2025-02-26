@@ -2,10 +2,14 @@
 
 source ~/.mutt/dracula.muttrc
 
+# Debug
+# set debug_level=5
+
 # Default Mail Directory
 set folder = "~/.mails"
 
 # Other mailboxes #
+mailboxes -label todo $HOME/.mails/todo
 mailboxes -label mchauras $HOME/.mails/mchauras
 mailboxes -label sched $HOME/.mails/sched
 mailboxes -label linuxppc $HOME/.mails/linuxppc
@@ -57,7 +61,10 @@ bind pager l next-entry
 
 #Toggle the visibility of the Sidebar.
 bind index,pager B sidebar-toggle-visible
-macro index,pager M "<tag-thread>;C +todo<enter>" "Copy entire thread to todo mailbox"
+macro index,pager M "<untag-pattern>.*<enter><tag-thread>;C +todo<enter>" "Copy entire thread to todo mailbox"
+macro index,pager R "<reply>\nReviewed-by: Mukesh Kumar Chaurasiya <mchauras@linux.ibm.com>\n"
+macro index,pager DP "|b4 am -o $HOME/src/mutt_patches"
+
 
 # Number of index lines to keep visible while reading a message
 # set pager_index_lines=3
@@ -69,4 +76,7 @@ macro index,pager M "<tag-thread>;C +todo<enter>" "Copy entire thread to todo ma
 set new_mail_command="notify-send -i '/home/mchauras/.neomutt.png' \
 'New Email in %f' '%n new messages, %u unread.' &"
 
-#source ~/.muttrc.cred 
+source ~/.muttrc.cred 
+
+# Default Mail Directory
+set folder = "~/.mails"
