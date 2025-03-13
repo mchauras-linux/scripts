@@ -23,5 +23,5 @@ emacs --eval '(progn
 if ! cmp -s $AGENDA_FILE $TEMP_AGENDA_FILE; then
 	# Send email
 	echo "Agenda has changed"
-	~/scripts/agenda/mukesh-send-agenda.sh
+	~/scripts/agenda/mchauras-send-agenda.sh
 fi
