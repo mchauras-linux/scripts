@@ -84,6 +84,7 @@
 	output = maildir:/home/mchauras/.mails/mchauras
 [external "https://lore.kernel.org/all/"]
 	lastresult = 1743532164
+
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 114870
 
