@@ -1,3 +1,4 @@
 return {
-	"tpope/vim-fugitive"
+  -- add gruvbox
+  { "tpope/vim-fugitive" },
 }

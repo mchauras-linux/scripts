@@ -17,7 +17,6 @@ mailboxes -label linux-riscv $HOME/.mails/linux-riscv
 mailboxes -label memory-management $HOME/.mails/mm
 mailboxes -label grub-devel $HOME/.mails/grub-devel
 mailboxes -label ltc-people $HOME/.mails/ltc-people
-mailboxes -label todo $HOME/.mails/todo
 #mailboxes -label fsdevel $HOME/workspace/projects/lei/fsdevel
 #mailboxes -label ojaswin $HOME/workspace/projects/lei/ojaswin
 #mailboxes -label ltc-mmfs $HOME/workspace/projects/lei/ltc-mmfs
@@ -63,9 +62,7 @@ bind pager l next-entry
 bind index,pager B sidebar-toggle-visible
 macro index,pager M "<untag-pattern>.*<enter><tag-thread>;C +todo<enter>" "Copy entire thread to todo mailbox"
 macro index,pager R "<reply>\nReviewed-by: Mukesh Kumar Chaurasiya <mchauras@linux.ibm.com>\n"
-macro index,pager DP "|b4 am -o $HOME/src/mutt_patches"
-
-
+macro index,pager DP "| b4 am -o $HOME/src/mutt_patches"
 # Number of index lines to keep visible while reading a message
 # set pager_index_lines=3
 

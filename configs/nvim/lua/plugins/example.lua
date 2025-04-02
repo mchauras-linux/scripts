@@ -89,6 +89,7 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
+      autoformat = false,
       ---@type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
@@ -101,7 +102,8 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "jose-elias-alvarez/typescript.nvim",
+      -- "jose-elias-alvarez/typescript.nvim",
+      "nvimtools/none-ls.nvim",
       init = function()
         require("lazyvim.util").on_attach(function(_, buffer)
           -- stylua: ignore
@@ -169,6 +171,7 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "tsx",
         "typescript",
+        "clangd",
       })
     end,
   },

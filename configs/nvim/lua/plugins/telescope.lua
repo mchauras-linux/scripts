@@ -1,7 +1,21 @@
--- plugins/telescope.lua:
 return {
-  "nvim-telescope/telescope.nvim",
-  tag = "0.1.1",
-  -- or                              , branch = '0.1.1',
-  dependencies = { "nvim-lua/plenary.nvim" },
+	"nvim-telescope/telescope.nvim",
+	keys = {
+		-- add a keymap to browse plugin files
+		-- stylua: ignore
+		{
+			"<leader>sg",
+			function()
+				require("telescope.builtin").live_grep({})
+			end,
+			desc = "Grep (root dir)",
+		},
+		{
+			"<leader>/",
+			function()
+				require("telescope.builtin").live_grep({ cwd = false })
+			end,
+			desc = "Grep (cwd)",
+		},
+	},
 }
