@@ -62,7 +62,7 @@ bind pager l next-entry
 bind index,pager B sidebar-toggle-visible
 macro index,pager M "<untag-pattern>.*<enter><tag-thread>;C +todo<enter>" "Copy entire thread to todo mailbox"
 macro index,pager R "<reply>\nReviewed-by: Mukesh Kumar Chaurasiya <mchauras@linux.ibm.com>\n"
-macro index,pager DP "|b4 shazam -o $HOME/src/mutt_patches"
+macro index,pager DP "| b4 am -o $HOME/src/mutt_patches"
 # Number of index lines to keep visible while reading a message
 # set pager_index_lines=3
 

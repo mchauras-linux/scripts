@@ -2383,14 +2383,14 @@ python Dashboard.start()
 
 set auto-load safe-path /
 
-define mchauras-start
+define debug-generic-start
 	if $argc < 1
         	printf "Usage: mchauras-start <tty_number>\n"
 		printf "Get the tty number from `tty` command in terminal.\n"
 	else
 		target remote:1234
 		dashboard -layout source assembly registers
-		dashboard source -style height 30
+		dashboard source -style height 25
 		dashboard registers -output /dev/pts/$arg0
 	end
 end
