@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Looks in the ~/hmc-managed-systems.txt file to give which hmc has the lpar
+# Usage:
+#	which-hmc system
+#
+# Example:
+#	which-hmc rain85
+#	which-hmc ltcrain85
+#
+#
+if [[ "$@" = *"-h"* ]]; then
+	echo "USAGE: which-hmc <lpar-name/substring-of-lpar-name> [-f]"
+	echo "EXAMPLE: which-hmc ltcever7x3 [-f]"
+	echo "-f: Pass any second argument to force refresh of system list"
+	exit 1
+fi
+
+test -z "$1" && {
+	echo "Please provide lpar name\n"
+	echo "USAGE: which-hmc <lpar-name/substring-of-lpar-name> [-f]"
+	echo "EXAMPLE: which-hmc ltcever7x3"
+	exit 1
+}
+managed_system=$(echo $1 | cut -d'.' -f1 | cut -d'-' -f1)
+force=$2
+test -n "$force" && update-hmc-system-list
+hmc="$(grep $managed_system $HOME/.hmc-managed-systems.txt | cut -d':' -f1)"
+test -z "$hmc" && test -z "$force" && {
+	echo "System not connected to any of the known HMCs. Trying to refresh system list..."
+	update-hmc-system-list
+	hmc="$(grep $managed_system $HOME/.hmc-managed-systems.txt | cut -d':' -f1)"
+}
+if [[ "$hmc" == "" ]]; then
+	echo "System not connected to any of the known HMCs";
+	exit 1
+else
+	echo $hmc.onecloud.stglabs.ibm.com
+fi
+
