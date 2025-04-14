@@ -11,7 +11,7 @@
 	dedupe = mid
 	output = maildir:/home/mchauras/.mails/grub-devel
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1741804140
+	lastresult = 1744568940
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123443
 
@@ -31,7 +31,7 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123649
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1741804143
+	lastresult = 1744568942
 
 
 ; to refresh with new results, run: lei up /home/mchauras/.mails/linux-riscv
@@ -49,13 +49,13 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123648
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1741804140
+	lastresult = 1744568941
 
 
 ; to refresh with new results, run: lei up /home/mchauras/.mails/ltc-people
 ; `maxuid' and `lastresult' lines are maintained by "lei up" for optimization
 [lei]
-	q = (f:avnish@linux.ibm.com OR f:sshegde@linux.ibm.com OR f:vineethr@linux.ibm.com OR f:nysal@linux.ibm.com OR f:srikar@linux.ibm.com OR f:vishalc@linux.ibm.com OR f:ojaswin@linux.ibm.com OR f:riteshh@linux.ibm.com OR f:donettom@linux.ibm.com) AND rt:3.month.ago..
+	q = (f:avnish@linux.ibm.com OR f:sshegde@linux.ibm.com OR f:vineethr@linux.ibm.com OR f:nysal@linux.ibm.com OR f:srikar@linux.ibm.com OR f:vishalc@linux.ibm.com OR f:ojaswin@linux.ibm.com OR f:riteshh@linux.ibm.com OR f:donettom@linux.ibm.com OR f:likhitha@linux.ibm.com OR f:aditya.b1@linux.ibm.com OR f:krishnak@linux.ibm.com OR f:maddy@linux.ibm.com) AND rt:3.month.ago..
 [lei "q"]
 	include = https://lore.kernel.org/all/
 	external = 1
@@ -67,7 +67,7 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 121630
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1741804146
+	lastresult = 1744568944
 
 
 ; to refresh with new results, run: lei up /home/mchauras/.mails/mchauras
@@ -83,7 +83,7 @@
 	dedupe = mid
 	output = maildir:/home/mchauras/.mails/mchauras
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1741804147
+	lastresult = 1744177209
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 114870
 
@@ -103,7 +103,7 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123645
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1741804147
+	lastresult = 1744568945
 
 
 ; to refresh with new results, run: lei up /home/mchauras/.mails/sched
@@ -121,6 +121,6 @@
 [external "/home/mchauras/.local/share/lei/store"]
 	maxuid = 123542
 [external "https://lore.kernel.org/all/"]
-	lastresult = 1741804152
+	lastresult = 1744568947
 
 
