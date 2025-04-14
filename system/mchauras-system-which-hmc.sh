@@ -9,6 +9,10 @@
 #	which-hmc ltcrain85
 #
 #
+#
+
+GET_LIST_CMD=$HOME/scripts/system/mchauras-system-update-hmc-system-list.sh
+
 if [[ "$@" = *"-h"* ]]; then
 	echo "USAGE: which-hmc <lpar-name/substring-of-lpar-name> [-f]"
 	echo "EXAMPLE: which-hmc ltcever7x3 [-f]"
@@ -24,11 +28,11 @@ test -z "$1" && {
 }
 managed_system=$(echo $1 | cut -d'.' -f1 | cut -d'-' -f1)
 force=$2
-test -n "$force" && update-hmc-system-list
+test -n "$force" && $GET_LIST_CMD
 hmc="$(grep $managed_system $HOME/.hmc-managed-systems.txt | cut -d':' -f1)"
 test -z "$hmc" && test -z "$force" && {
 	echo "System not connected to any of the known HMCs. Trying to refresh system list..."
-	update-hmc-system-list
+	$GET_LIST_CMD
 	hmc="$(grep $managed_system $HOME/.hmc-managed-systems.txt | cut -d':' -f1)"
 }
 if [[ "$hmc" == "" ]]; then
