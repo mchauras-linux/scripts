@@ -31,7 +31,7 @@ export_queries() {
 		        echo -e "\n" >> "$backup_file"  # Add a newline for separation
 	      fi
     done
-
+    sed -i '/lastresult = /d' $backup_file
     echo "All saved searches exported to '$backup_file'."
 }
 
