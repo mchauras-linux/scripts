@@ -8,6 +8,7 @@
 # have updated list
 PCAJET_PASSWD=$(cat $HOME/.pcajet)
 managed_systems_file="$HOME/.hmc-managed-systems.txt"
+
 if ! command -v sshpass &> /dev/null
 then
 	echo "sshpass is not installed. Please install it to use this"
@@ -24,6 +25,7 @@ for v in {1..12}; do
 	# Timout after 5s, instead of failing at it
 	sshpass -p $PCAJET_PASSWD ssh -o ConnectTimeout=5 -o LogLevel=ERROR \
 	-o StrictHostKeyChecking=no hscroot@ltcvhmc$v.onecloud.stglabs.ibm.com "true"
+
 	if [[ $? -eq 5 ]]; then
 		echo "$PCAJET_PASSWD is invalid"
 		mv $HOME/.pcajet $HOME/.pcajet.invalid
